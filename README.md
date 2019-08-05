@@ -17,7 +17,9 @@ Live Preview: <a href="https://cover-image-generator.pjijin1.now.sh/" target="_B
 
 ## To Do
 
--   Dark / Light mode.
+-   Dark / Light mode
+
+-   Remove Image from frame
 
 # Usage
 
