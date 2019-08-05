@@ -4,6 +4,9 @@ Generate a cover image for your blog post online.
 
 [![Cover Image Generator](https://github.com/PJijin/Cover-Image-Generator/blob/master/preview.png?raw=true 'Cover Image Generator')]()
 
+Live Preview: <a href="https://cover-image-generator.pjijin1.now.sh/" target="_BLANK">Click Here</a>
+
+
 ## Features
 
 -   Generator Cover Image Online.
@@ -14,7 +17,9 @@ Generate a cover image for your blog post online.
 
 ## To Do
 
--   Dark / Light mode.
+-   Dark / Light mode
+
+-   Remove Image from frame
 
 # Usage
 
