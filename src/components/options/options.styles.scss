@@ -1,0 +1,36 @@
+.j-sb {
+	justify-content: space-between;
+}
+.color-picker {
+	margin-top: 15px;
+}
+
+.options {
+	width: 300px;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	margin: 1rem;
+}
+
+.options h4 {
+	font-size: 14px;
+	font-family: 'Montserrat';
+	font-weight: 600;
+}
+
+.options h5 {
+	font-size: 12px;
+	font-family: 'Montserrat';
+	font-weight: 400;
+}
+
+input[type='number'] {
+	width: 50px;
+	height: 25px;
+	margin-top: 10px;
+}
+
+input[type='file'] {
+	margin-top: 20px;
+	margin-left: 40px;
+}

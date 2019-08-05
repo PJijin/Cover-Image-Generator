@@ -1,0 +1,75 @@
+[contenteditable]:focus {
+	outline: 0px solid transparent;
+}
+
+.movable {
+	display: flex;
+}
+
+.movable .handle {
+	width: 25px;
+	background: url('./move.svg') no-repeat;
+	height: 18px;
+	fill: white;
+	display: none;
+}
+
+.movable:hover .handle {
+	display: block;
+	position: absolute;
+}
+
+.center {
+	display: flex;
+	align-items: center;
+	height: 90vh;
+	justify-content: center;
+	flex-grow: 1;
+}
+
+.handle {
+	cursor: move;
+}
+
+.design-frame {
+	min-width: 1000px;
+	min-height: 420px;
+}
+
+.capture {
+	max-width: 1000px;
+	max-height: 420px;
+	min-height: 420px;
+}
+
+.heading {
+	padding-left: 10px;
+}
+
+.sub-heading {
+	padding-left: 30px;
+}
+
+.frame-image {
+	width: 200px;
+	height: 200px;
+}
+
+.capture h3 {
+	display: block;
+}
+
+.toolbar {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.toolbar button {
+	background: #0693e3;
+	border: 0px;
+	color: white;
+	padding: 0.8rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	outline: 0px;
+}
