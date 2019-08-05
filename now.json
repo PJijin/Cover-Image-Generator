@@ -17,6 +17,13 @@
 				"cache-control": "s-maxage=31536000,immutable"
 			},
 			"dest": "/static/$1"
+		}, 
+		{
+		    "src": "/icons/(.*)",
+		    "headers": {
+			"cache-control": "s-maxage=31536000,immutable"
+		    },
+		    "dest": "/icons/$1"
 		},
 		{
 			"src": "/favicon.ico",
