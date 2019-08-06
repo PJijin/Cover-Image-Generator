@@ -12,7 +12,7 @@ export const downloadImage = (node, width, height) => {
 
 	domtoimage.toJpeg(node, config).then(function(dataUrl) {
 		let link = document.createElement('a');
-		link.download = 'codekeeper.png';
+		link.download = 'screenshot.png';
 		link.href = 'data:' + dataUrl;
 		link.click();
 	});

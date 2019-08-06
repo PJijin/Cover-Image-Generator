@@ -10,14 +10,9 @@ import NumberInput from '../number-input/number-input.component';
 const Options = ({ updateSettings }) => {
 	const settings = useContext(SettingsContext);
 
-	const changeSettings = (name, value) => {
-		updateSettings(name, value);
-	};
-
-	const insertImage = e => {
-		const value = [...settings.images, `/icons/${e}`];
-		changeSettings('images', value);
-	};
+	const changeSettings = (name, value) => updateSettings(name, value);
+	const insertImage = e => changeSettings('images', [...settings.images, `/icons/${e}`]);
+	const handleChange = e => changeSettings([e.target.name], e.target.value);
 
 	const handleImage = async e => {
 		const name = [e.target.name];
@@ -31,7 +26,6 @@ const Options = ({ updateSettings }) => {
 		}
 	};
 
-	const handleChange = e => changeSettings([e.target.name], e.target.value);
 	return (
 		<div className="options">
 			<h4>Options</h4>

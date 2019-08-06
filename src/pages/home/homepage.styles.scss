@@ -6,7 +6,8 @@ body[class='dark-mode react-draggable-transparent-selection'] {
 	--muted-color: #787373;
 }
 
-body[class='light-mode'] {
+body[class='light-mode'],
+body[class='light-mode react-draggable-transparent-selection'] {
 	--text-color: #333;
 	--background-color: #f1f1f1;
 	--background-light-color: #fcfcfc;
