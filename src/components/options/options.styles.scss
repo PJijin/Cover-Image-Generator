@@ -25,9 +25,14 @@
 }
 
 input[type='number'] {
-	width: 50px;
+	width: 33px;
 	height: 25px;
 	margin-top: 10px;
+	background: var(--muted-color);
+	color: var(--text-color);
+	border: 0px;
+	padding: 0.3rem 0.4rem;
+	border-radius: 0.2rem;
 }
 
 input[type='file'] {

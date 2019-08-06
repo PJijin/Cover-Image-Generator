@@ -1,3 +1,23 @@
+body[class='dark-mode'],
+body[class='dark-mode react-draggable-transparent-selection'] {
+	--text-color: #fff;
+	--background-color: #333;
+	--background-light-color: #3e3d3d;
+	--muted-color: #787373;
+}
+
+body[class='light-mode'] {
+	--text-color: #333;
+	--background-color: #f1f1f1;
+	--background-light-color: #fcfcfc;
+	--muted-color: #999595;
+}
+
+body {
+	background: var(--background-light-color) !important;
+	color: var(--text-color) !important;
+}
+
 .flex {
 	display: flex;
 }

@@ -5,7 +5,7 @@
 
 .swatch {
 	padding: 5px;
-	background: #fff;
+	background: var(--background-color);
 	border-radius: 1px;
 	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
 	display: flex;

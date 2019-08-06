@@ -6,7 +6,7 @@ import SettingsContext from '../../contexts/settings.context';
 
 import './design.styles.scss';
 
-const Design = () => {
+const Design = ({ toggleMode, currentMode: { value } }) => {
 	const settings = useContext(SettingsContext);
 
 	const { background, color, headingFontSize, summaryFontSize, images } = settings;
@@ -30,7 +30,12 @@ const Design = () => {
 	return (
 		<div>
 			<div className="toolbar">
-				<button onClick={exportPic}>Download Image</button>
+				<button className="toggle-mode" onClick={toggleMode}>
+					{value ? <span>&#9728;</span> : <span>&#9790;</span>}
+				</button>
+				<button className="download" onClick={exportPic}>
+					Download Image
+				</button>
 			</div>
 			<div className="center" ref={capture}>
 				<div className="design-frame" style={containerStyle}>
