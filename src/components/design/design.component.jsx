@@ -40,21 +40,6 @@ const Design = ({ toggleMode, currentMode: { value } }) => {
 			<div className="center" ref={capture}>
 				<div className="design-frame" style={containerStyle}>
 					<div className="capture">
-						{images.map(img => (
-							<Draggable
-								handle=".handle"
-								defaultPosition={{ x: 0, y: 0 }}
-								position={null}
-								grid={[25, 25]}
-								scale={1}
-							>
-								<div className="movable">
-									<p className="handle" />
-									<img className="frame-image" alt="image" src={img} />
-								</div>
-							</Draggable>
-						))}
-
 						<Draggable
 							handle=".handle"
 							defaultPosition={{ x: 0, y: 0 }}
@@ -88,6 +73,21 @@ const Design = ({ toggleMode, currentMode: { value } }) => {
 								</div>
 							</div>
 						</Draggable>
+
+						{images.map(img => (
+							<Draggable
+								handle=".handle"
+								defaultPosition={{ x: 0, y: 0 }}
+								position={null}
+								grid={[25, 25]}
+								scale={1}
+							>
+								<div className="movable">
+									<p className="handle" />
+									<img className="frame-image" alt="image" src={img} />
+								</div>
+							</Draggable>
+						))}
 					</div>
 				</div>
 			</div>

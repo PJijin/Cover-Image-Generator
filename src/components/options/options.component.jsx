@@ -64,7 +64,7 @@ const Options = ({ updateSettings }) => {
 			</LabelOption>
 
 			<LabelOption name="Image">
-				<input type="file" name="images" onChange={handleImage} />
+				<input type="file" name="images" onChange={handleImage} accept="image/x-png,image/gif,image/jpeg" />
 			</LabelOption>
 
 			<h5>Quick Insert</h5>
