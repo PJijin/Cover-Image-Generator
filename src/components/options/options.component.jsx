@@ -36,11 +36,15 @@ const Options = ({ updateSettings }) => {
 		<div className="options">
 			<h4>Options</h4>
 			<LabelOption name="Background">
-				<ColorPicker changeSettings={changeSettings} name="background" />
+				<ColorPicker
+					defaultValue={defaultSettings.background}
+					changeSettings={changeSettings}
+					name="background"
+				/>
 			</LabelOption>
 
 			<LabelOption name="Font Color">
-				<ColorPicker changeSettings={changeSettings} name="color" />
+				<ColorPicker defaultValue={defaultSettings.color} changeSettings={changeSettings} name="color" />
 			</LabelOption>
 
 			<LabelOption name="Heading Font Size">

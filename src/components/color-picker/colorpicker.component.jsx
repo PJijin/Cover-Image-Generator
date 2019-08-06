@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TwitterPicker } from 'react-color';
 import './colorpicker.styles.scss';
 
-const ColorPicker = ({ changeSettings, name }) => {
+const ColorPicker = ({ changeSettings, name, defaultValue }) => {
 	const [toggle, setToggle] = useState(false);
 	const [current, setCurrent] = useState(false);
 	const showColorPicker = () => setToggle(!toggle);
@@ -16,10 +16,12 @@ const ColorPicker = ({ changeSettings, name }) => {
 		<div>
 			<div className="color-picker">
 				<div className="swatch" onClick={showColorPicker}>
-					<div className="color" style={{ background: current }} />
+					<div className="color" style={{ background: current || defaultValue }} />
 					{toggle && <span>&#10005;</span>}
 				</div>
-				<div className="picker">{toggle && <TwitterPicker onChange={updateSettigs} triangle="hide" />}</div>
+				<div className="picker">
+					{toggle && <TwitterPicker color={defaultValue} onChange={updateSettigs} triangle="hide" />}
+				</div>
 			</div>
 		</div>
 	);
