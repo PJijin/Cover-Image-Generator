@@ -1,6 +1,6 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 
-import { downloadImage } from './design.util';
+import { downloadImage, deleteImageFromArray } from './design.util';
 import SettingsContext from '../../contexts/settings.context';
 
 import './design.styles.scss';
@@ -9,14 +9,14 @@ import Heading from '../heading/heading.component';
 import SubHeading from '../sub-heading/sub-heading.component';
 import FrameImage from '../frame-image/frame-image.component';
 
-const Design = ({ toggleMode, currentMode: { value } }) => {
+const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 	const settings = useContext(SettingsContext);
 	const capture = useRef();
 
 	const { background, color, headingFontSize, summaryFontSize, images } = settings;
 
 	const exportPic = async () => downloadImage(capture.current, 1000, 420);
-
+	const deleteImage = imageToDelete => updateSettings(images, deleteImageFromArray(images, imageToDelete));
 	const containerStyle = { background, color };
 	const headingStyle = { fontSize: `${headingFontSize}px` };
 	const summaryStyle = { fontSize: `${summaryFontSize}px` };
@@ -44,7 +44,7 @@ const Design = ({ toggleMode, currentMode: { value } }) => {
 
 						<div className="image-wrapper">
 							{images.map(image => (
-								<FrameImage image={image} key={image} />
+								<FrameImage image={image} key={image} deleteImage={deleteImage} />
 							))}
 						</div>
 					</div>

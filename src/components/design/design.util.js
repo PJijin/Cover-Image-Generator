@@ -17,3 +17,7 @@ export const downloadImage = (node, width, height) => {
 		link.click();
 	});
 };
+
+export const deleteImageFromArray = (images, imageToDelete) => {
+	return images.filter(image => image !== imageToDelete);
+};

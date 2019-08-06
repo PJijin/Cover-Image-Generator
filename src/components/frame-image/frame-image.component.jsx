@@ -1,12 +1,12 @@
 import React from 'react';
 import DraggableComponent from '../draggable/draggable.component';
 
-const FrameImage = ({ image }) => {
+const FrameImage = ({ image, deleteImage }) => {
 	return (
 		<DraggableComponent key={image}>
 			<div className="movable">
 				<p className="handle" />
-				<img className="frame-image" src={image} dragabble="false" />
+				<img onClick={() => deleteImage(image)} className="frame-image" src={image} dragabble="false" alt="" />
 			</div>
 		</DraggableComponent>
 	);

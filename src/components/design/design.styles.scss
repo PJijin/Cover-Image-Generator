@@ -14,7 +14,16 @@
 	display: none;
 }
 
-.movable:hover .handle {
+.movable .delete {
+	width: 25px;
+	background: url('./move.svg') no-repeat;
+	height: 18px;
+	fill: white;
+	display: none;
+}
+
+.movable:hover .handle,
+.movable:hover .delete {
 	display: block;
 	position: absolute;
 }
