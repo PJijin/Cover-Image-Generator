@@ -6,7 +6,6 @@ Generate a cover image for your blog post online.
 
 Live Preview: <a href="https://cover-image-generator.pjijin1.now.sh/" target="_BLANK">Click Here</a>
 
-
 ## Features
 
 -   Generator Cover Image Online.
@@ -15,9 +14,9 @@ Live Preview: <a href="https://cover-image-generator.pjijin1.now.sh/" target="_B
 
 -   Quick Insert Programming Logos (Material Icons)
 
-## To Do
-
 -   Dark / Light mode
+
+## To Do
 
 -   Remove Image from frame
 
