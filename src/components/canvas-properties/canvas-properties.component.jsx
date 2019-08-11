@@ -34,6 +34,14 @@ const CanvasProperties = ({ handleChange, defaultSettings, handleRadiusChange })
 								/>
 							</LabelOption>
 
+							<LabelOption name="Border">
+								<NumberInput
+									handleChange={handleChange}
+									name="border"
+									defaultValue={defaultSettings.border}
+								/>
+							</LabelOption>
+
 							<div>
 								<h5>Border Radius</h5>
 								<InputRange

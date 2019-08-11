@@ -6,5 +6,7 @@ export const defaultSettings = {
 	summaryFontSize: 25,
 	width: 1000,
 	height: 420,
-	radius: 0
+	radius: 0,
+	border: 0,
+	borderColor: '#333'
 };
