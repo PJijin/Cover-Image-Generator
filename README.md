@@ -6,23 +6,35 @@ Generate a cover image for your blog post online.
 
 Live Preview: <a href="https://cover-image-generator.pjijin1.now.sh/" target="_BLANK">Click Here</a>
 
-## Features
+## ✨ Features
 
--   Generator Cover Image Online.
+-   🌌 Generate Cover Image Online.
 
--   Insert image from computer
+-   🖱 Drag and drop - Change content position easily
 
--   Quick Insert Programming Logos (Material Icons)
+-   🖼 Insert image from computer
 
--   Dark / Light mode
+-   💻 Quick Insert Programming Logos (Material Icons)
 
-## To Do
+-   🌈 Change Canvas border
 
--   Export in Png Format
+-   🔆 Dark / Light mode
 
--   Rounded Image Border
+-   🔛 Change canvas width, height
 
-# Usage
+-   🎨 Customize Background, Font colours
+
+-   ⬇️ Download Image
+
+## 📝 To Do
+
+-   Export in JPEG/SVG Format
+
+# ⚙️ Usage
+
+You can use the online version to generate cover image. <a href="https://cover-image-generator.pjijin1.now.sh/" target="_BLANK">Click Here</a>
+
+OR
 
 1. Clone the Repo `git clone https://github.com/PJijin/Cover-Image-Generator.git`
 2. Run `npm install`
@@ -30,8 +42,8 @@ Live Preview: <a href="https://cover-image-generator.pjijin1.now.sh/" target="_B
 
 # 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues and feature requests are welcome! 😍
 
 # Show your support
 
-Give a ⭐️ if this project helped you!
+Give a ⭐️ if this project helped you! 🥰
