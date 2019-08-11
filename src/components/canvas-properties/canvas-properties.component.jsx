@@ -3,11 +3,13 @@ import { Toggle } from 'react-powerplug';
 import { Plus, Minus } from 'react-feather';
 import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
+
 import LabelOption from '../label-option/label-option.component';
 import NumberInput from '../number-input/number-input.component';
+import ColorPicker from '../color-picker/colorpicker.component';
 import './canvas-properties.styles.scss';
 
-const CanvasProperties = ({ handleChange, defaultSettings, handleRadiusChange }) => {
+const CanvasProperties = ({ handleChange, defaultSettings, changeSettings }) => {
 	const [radius, setRadius] = useState(defaultSettings.radius);
 	return (
 		<Toggle initial={false}>
@@ -42,6 +44,14 @@ const CanvasProperties = ({ handleChange, defaultSettings, handleRadiusChange })
 								/>
 							</LabelOption>
 
+							<LabelOption name="Border Color">
+								<ColorPicker
+									defaultValue={defaultSettings.borderColor}
+									changeSettings={changeSettings}
+									name="borderColor"
+								/>
+							</LabelOption>
+
 							<div>
 								<h5>Border Radius</h5>
 								<InputRange
@@ -51,7 +61,7 @@ const CanvasProperties = ({ handleChange, defaultSettings, handleRadiusChange })
 									value={radius}
 									onChange={value => {
 										setRadius(value);
-										handleRadiusChange(value);
+										changeSettings('radius', value);
 									}}
 								/>
 							</div>
