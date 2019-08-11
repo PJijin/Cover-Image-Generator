@@ -5,5 +5,6 @@ export const defaultSettings = {
 	headingFontSize: 44,
 	summaryFontSize: 25,
 	width: 1000,
-	height: 420
+	height: 420,
+	radius: 0
 };

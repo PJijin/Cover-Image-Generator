@@ -10,6 +10,7 @@
 		"react-dom": "^16.8.6",
 		"react-draggable": "^3.3.0",
 		"react-feather": "^2.0.3",
+		"react-input-range": "^1.3.0",
 		"react-powerplug": "^1.0.0",
 		"react-scripts": "3.0.1",
 		"use-dark-mode": "^2.3.1"

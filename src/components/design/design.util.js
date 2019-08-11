@@ -1,6 +1,6 @@
 import domtoimage from 'dom-to-image';
 
-export const downloadImage = (node, width, height) => {
+export const downloadImage = (node, width, height, type = 'png') => {
 	const config = {
 		style: {
 			'transform-origin': 'center'
@@ -10,12 +10,21 @@ export const downloadImage = (node, width, height) => {
 		quality: 1
 	};
 
-	domtoimage.toJpeg(node, config).then(function(dataUrl) {
-		let link = document.createElement('a');
-		link.download = 'screenshot.png';
-		link.href = 'data:' + dataUrl;
-		link.click();
-	});
+	if (type === 'png') {
+		domtoimage.toJpeg(node, config).then(function(dataUrl) {
+			let link = document.createElement('a');
+			link.download = 'screenshot.png';
+			link.href = 'data:' + dataUrl;
+			link.click();
+		});
+	} else {
+		domtoimage.toJpeg(node, config).then(function(dataUrl) {
+			let link = document.createElement('a');
+			link.download = 'screenshot.png';
+			link.href = 'data:' + dataUrl;
+			link.click();
+		});
+	}
 };
 
 export const deleteImageFromArray = (images, imageToDelete) => {

@@ -15,6 +15,7 @@ const Options = ({ updateSettings }) => {
 	const changeSettings = (name, value) => updateSettings(name, value);
 	const insertImage = e => changeSettings('images', [...settings.images, `/icons/${e}`]);
 	const handleChange = e => changeSettings([e.target.name], e.target.value);
+	const handleRadiusChange = value => changeSettings('radius', value);
 
 	const handleImage = async e => {
 		const name = [e.target.name];
@@ -45,7 +46,11 @@ const Options = ({ updateSettings }) => {
 
 			<FontSize defaultSettings={defaultSettings} handleChange={handleChange} />
 
-			<CanvasProperties defaultSettings={defaultSettings} handleChange={handleChange} />
+			<CanvasProperties
+				defaultSettings={defaultSettings}
+				handleChange={handleChange}
+				handleRadiusChange={handleRadiusChange}
+			/>
 
 			<LabelOption name="Image">
 				<input type="file" name="images" onChange={handleImage} accept="image/x-png,image/gif,image/jpeg" />
