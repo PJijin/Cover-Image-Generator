@@ -1,5 +1,9 @@
 body[class='dark-mode'],
 body[class='dark-mode react-draggable-transparent-selection'] {
+	--primary: #0facf3;
+	--primary-dark: #10a5e8;
+	--secondary-hover: #3c4859;
+
 	--text-color: #fff;
 	--background-color: #333;
 	--background-light-color: #3e3d3d;
@@ -8,6 +12,10 @@ body[class='dark-mode react-draggable-transparent-selection'] {
 
 body[class='light-mode'],
 body[class='light-mode react-draggable-transparent-selection'] {
+	--primary: #0facf3;
+	--primary-dark: #10a5e8;
+
+	--secondary-hover: #e9e4e4;
 	--text-color: #333;
 	--background-color: #f1f1f1;
 	--background-light-color: #fcfcfc;

@@ -75,13 +75,16 @@
 }
 
 .toolbar .download {
-	background: #0693e3;
+	background: var(--primary);
 	border: 0px;
 	color: white;
 	padding: 0.8rem;
 	border-radius: 0.5rem;
 	cursor: pointer;
 	outline: 0px;
+}
+.download:hover {
+	background: var(--primary-dark);
 }
 
 .toolbar .source {
@@ -95,6 +98,11 @@
 	font-size: 12px;
 	margin-left: 15px;
 	outline: 0px;
+}
+
+.source:hover,
+.toggle-mode:hover {
+	background: var(--secondary-hover) !important;
 }
 
 .toolbar .toggle-mode {
