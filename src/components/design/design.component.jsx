@@ -13,11 +13,11 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 	const settings = useContext(SettingsContext);
 	const capture = useRef();
 
-	const { background, color, headingFontSize, summaryFontSize, images } = settings;
+	const { background, color, headingFontSize, summaryFontSize, images, width, height } = settings;
 
-	const exportPic = async () => downloadImage(capture.current, 1000, 420);
+	const exportPic = async () => downloadImage(capture.current, width, height);
 	const deleteImage = imageToDelete => updateSettings(images, deleteImageFromArray(images, imageToDelete));
-	const containerStyle = { background, color };
+	const containerStyle = { background, color, width: `${width}px`, height: `${height}px` };
 	const headingStyle = { fontSize: `${headingFontSize}px` };
 	const summaryStyle = { fontSize: `${summaryFontSize}px` };
 

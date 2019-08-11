@@ -57,6 +57,14 @@ const Options = ({ updateSettings }) => {
 				/>
 			</LabelOption>
 
+			<LabelOption name="Width">
+				<NumberInput handleChange={handleChange} name="width" defaultValue={defaultSettings.width} />
+			</LabelOption>
+
+			<LabelOption name="Height">
+				<NumberInput handleChange={handleChange} name="height" defaultValue={defaultSettings.height} />
+			</LabelOption>
+
 			<LabelOption name="Image">
 				<input type="file" name="images" onChange={handleImage} accept="image/x-png,image/gif,image/jpeg" />
 			</LabelOption>

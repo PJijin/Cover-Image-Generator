@@ -3,5 +3,7 @@ export const defaultSettings = {
 	color: '#ffffff',
 	images: [],
 	headingFontSize: 44,
-	summaryFontSize: 25
+	summaryFontSize: 25,
+	width: 1000,
+	height: 420
 };
