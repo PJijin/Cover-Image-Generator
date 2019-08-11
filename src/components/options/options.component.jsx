@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
+
 import ColorPicker from '../color-picker/colorpicker.component';
 import LabelOption from '../label-option/label-option.component';
 import { defaultSettings } from '../../contexts/settings.utils';
-import './options.styles.scss';
 import SettingsContext from '../../contexts/settings.context.js';
 import Gallery from '../gallery/gallery.component';
 import NumberInput from '../number-input/number-input.component';
+import './options.styles.scss';
+import FontSize from '../font-size/font-size.component';
+import CanvasProperties from '../canvas-properties/canvas-properties.component';
 
 const Options = ({ updateSettings }) => {
 	const settings = useContext(SettingsContext);
@@ -41,29 +44,9 @@ const Options = ({ updateSettings }) => {
 				<ColorPicker defaultValue={defaultSettings.color} changeSettings={changeSettings} name="color" />
 			</LabelOption>
 
-			<LabelOption name="Heading Font Size">
-				<NumberInput
-					handleChange={handleChange}
-					name="headingFontSize"
-					defaultValue={defaultSettings.headingFontSize}
-				/>
-			</LabelOption>
+			<FontSize defaultSettings={defaultSettings} handleChange={handleChange} />
 
-			<LabelOption name="Summary Font Size">
-				<NumberInput
-					handleChange={handleChange}
-					name="summaryFontSize"
-					defaultValue={defaultSettings.summaryFontSize}
-				/>
-			</LabelOption>
-
-			<LabelOption name="Width">
-				<NumberInput handleChange={handleChange} name="width" defaultValue={defaultSettings.width} />
-			</LabelOption>
-
-			<LabelOption name="Height">
-				<NumberInput handleChange={handleChange} name="height" defaultValue={defaultSettings.height} />
-			</LabelOption>
+			<CanvasProperties defaultSettings={defaultSettings} handleChange={handleChange} />
 
 			<LabelOption name="Image">
 				<input type="file" name="images" onChange={handleImage} accept="image/x-png,image/gif,image/jpeg" />
