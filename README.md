@@ -18,7 +18,9 @@ Live Preview: <a href="https://cover-image-generator.pjijin1.now.sh/" target="_B
 
 ## To Do
 
--   Remove Image from frame
+-   Export in Png Format
+
+-   Rounded Image Border
 
 # Usage
 
