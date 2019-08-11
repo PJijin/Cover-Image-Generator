@@ -6,6 +6,7 @@ import LabelOption from '../label-option/label-option.component';
 import NumberInput from '../number-input/number-input.component';
 
 const FontSize = ({ handleChange, defaultSettings }) => {
+	const { headingFontSize, summaryFontSize } = defaultSettings;
 	return (
 		<Toggle initial={false}>
 			{({ on, toggle }) => (
@@ -19,14 +20,14 @@ const FontSize = ({ handleChange, defaultSettings }) => {
 								<NumberInput
 									handleChange={handleChange}
 									name="headingFontSize"
-									defaultValue={defaultSettings.headingFontSize}
+									defaultValue={headingFontSize}
 								/>
 							</LabelOption>
 							<LabelOption name="Summary Font Size">
 								<NumberInput
 									handleChange={handleChange}
 									name="summaryFontSize"
-									defaultValue={defaultSettings.summaryFontSize}
+									defaultValue={summaryFontSize}
 								/>
 							</LabelOption>
 						</>

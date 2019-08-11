@@ -11,6 +11,8 @@ import './canvas-properties.styles.scss';
 
 const CanvasProperties = ({ handleChange, defaultSettings, changeSettings }) => {
 	const [radius, setRadius] = useState(defaultSettings.radius);
+	const { width, height, border, borderColor } = defaultSettings;
+
 	return (
 		<Toggle initial={false}>
 			{({ on, toggle }) => (
@@ -21,32 +23,20 @@ const CanvasProperties = ({ handleChange, defaultSettings, changeSettings }) => 
 					{on && (
 						<>
 							<LabelOption name="Width">
-								<NumberInput
-									handleChange={handleChange}
-									name="width"
-									defaultValue={defaultSettings.width}
-								/>
+								<NumberInput handleChange={handleChange} name="width" defaultValue={width} />
 							</LabelOption>
 
 							<LabelOption name="Height">
-								<NumberInput
-									handleChange={handleChange}
-									name="height"
-									defaultValue={defaultSettings.height}
-								/>
+								<NumberInput handleChange={handleChange} name="height" defaultValue={height} />
 							</LabelOption>
 
 							<LabelOption name="Border">
-								<NumberInput
-									handleChange={handleChange}
-									name="border"
-									defaultValue={defaultSettings.border}
-								/>
+								<NumberInput handleChange={handleChange} name="border" defaultValue={border} />
 							</LabelOption>
 
 							<LabelOption name="Border Color">
 								<ColorPicker
-									defaultValue={defaultSettings.borderColor}
+									defaultValue={borderColor}
 									changeSettings={changeSettings}
 									name="borderColor"
 								/>

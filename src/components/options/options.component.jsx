@@ -5,9 +5,9 @@ import LabelOption from '../label-option/label-option.component';
 import { defaultSettings } from '../../contexts/settings.utils';
 import SettingsContext from '../../contexts/settings.context.js';
 import Gallery from '../gallery/gallery.component';
-import './options.styles.scss';
 import FontSize from '../font-size/font-size.component';
 import CanvasProperties from '../canvas-properties/canvas-properties.component';
+import './options.styles.scss';
 
 const Options = ({ updateSettings }) => {
 	const settings = useContext(SettingsContext);
