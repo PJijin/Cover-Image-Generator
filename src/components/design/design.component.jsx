@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from 'react';
-import { Sun, Moon, Download, GitHub } from 'react-feather';
+import { Sun, Moon, Download } from 'react-feather';
 
 import { downloadImage, deleteImageFromArray } from './design.util';
 import SettingsContext from '../../contexts/settings.context';
@@ -8,6 +8,7 @@ import Heading from '../heading/heading.component';
 import SubHeading from '../sub-heading/sub-heading.component';
 import FrameImage from '../frame-image/frame-image.component';
 import './design.styles.scss';
+import Link from '../link/link.component';
 
 const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 	const settings = useContext(SettingsContext);
@@ -48,9 +49,10 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 				<button className="download" onClick={exportPic}>
 					<Download size="14" /> Download Image
 				</button>
-				<a className="source" href="https://github.com/PJijin/Cover-Image-Generator/">
-					<GitHub size="14" /> Github
-				</a>
+
+				<Link className="source" icon="github" href="https://github.com/PJijin/Cover-Image-Generator/" />
+
+				<Link className="source" icon="coffee" href="https://www.buymeacoffee.com/PJijin/" />
 			</div>
 			<div className="center" ref={capture}>
 				<div className="design-frame" style={containerStyle}>

@@ -31,6 +31,7 @@ const Options = ({ updateSettings }) => {
 	return (
 		<div className="options">
 			<h4>Options</h4>
+
 			<LabelOption name="Background">
 				<ColorPicker
 					defaultValue={defaultSettings.background}

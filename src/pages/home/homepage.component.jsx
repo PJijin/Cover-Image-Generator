@@ -7,6 +7,7 @@ import { defaultSettings } from '../../contexts/settings.utils';
 import Options from '../../components/options/options.component';
 import Design from '../../components/design/design.component';
 import './homepage.styles.scss';
+import Footer from '../../components/footer/footer.component';
 
 const Home = () => {
 	const [settings, setSettings] = useState(defaultSettings);
@@ -15,17 +16,20 @@ const Home = () => {
 	const updateSettings = (set, value) => setSettings({ ...settings, [set]: value });
 
 	return (
-		<div className="flex home">
-			<SettingsContext.Provider value={settings}>
-				<Options updateSettings={updateSettings} />
-				<Design
-					settings={settings}
-					updateSettings={updateSettings}
-					toggleMode={darkMode.toggle}
-					currentMode={darkMode}
-				/>
-			</SettingsContext.Provider>
-		</div>
+		<>
+			<div className="flex home">
+				<SettingsContext.Provider value={settings}>
+					<Options updateSettings={updateSettings} />
+					<Design
+						settings={settings}
+						updateSettings={updateSettings}
+						toggleMode={darkMode.toggle}
+						currentMode={darkMode}
+					/>
+				</SettingsContext.Provider>
+			</div>
+			<Footer />
+		</>
 	);
 };
 

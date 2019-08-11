@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { TwitterPicker } from 'react-color';
+import { XCircle } from 'react-feather';
 import './colorpicker.styles.scss';
 
 const ColorPicker = ({ changeSettings, name, defaultValue }) => {
@@ -17,10 +18,10 @@ const ColorPicker = ({ changeSettings, name, defaultValue }) => {
 			<div className="color-picker">
 				<div className="swatch" onClick={showColorPicker}>
 					<div className="color" style={{ background: current || defaultValue }} />
-					{toggle && <span>&#10005;</span>}
+					{toggle && <XCircle size="14" />}
 				</div>
 				<div className="picker">
-					{toggle && <TwitterPicker color={defaultValue} onChange={updateSettigs} triangle="hide" />}
+					{toggle && <TwitterPicker color={defaultValue} onChange={updateSettigs} triangle="show" />}
 				</div>
 			</div>
 		</div>
