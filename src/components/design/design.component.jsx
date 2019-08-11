@@ -1,5 +1,5 @@
 import React, { useContext, useRef } from 'react';
-import { Sun, Moon, Download } from 'react-feather';
+import { Sun, Moon, Download, GitHub } from 'react-feather';
 
 import { downloadImage, deleteImageFromArray } from './design.util';
 import SettingsContext from '../../contexts/settings.context';
@@ -30,6 +30,9 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 				<button className="download" onClick={exportPic}>
 					<Download size="14" /> Download Image
 				</button>
+				<a className="source" href="https://github.com/PJijin/Cover-Image-Generator/">
+					<GitHub size="14" /> Github
+				</a>
 			</div>
 			<div className="center" ref={capture}>
 				<div className="design-frame" style={containerStyle}>

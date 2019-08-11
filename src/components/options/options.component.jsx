@@ -5,7 +5,6 @@ import LabelOption from '../label-option/label-option.component';
 import { defaultSettings } from '../../contexts/settings.utils';
 import SettingsContext from '../../contexts/settings.context.js';
 import Gallery from '../gallery/gallery.component';
-import NumberInput from '../number-input/number-input.component';
 import './options.styles.scss';
 import FontSize from '../font-size/font-size.component';
 import CanvasProperties from '../canvas-properties/canvas-properties.component';

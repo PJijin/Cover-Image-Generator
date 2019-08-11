@@ -31,7 +31,7 @@
 .center {
 	display: flex;
 	align-items: center;
-	height: 90vh;
+	margin-top: 50px;
 	justify-content: center;
 	flex-grow: 1;
 }
@@ -70,6 +70,7 @@
 
 .toolbar {
 	display: flex;
+	margin: 20px 0;
 	justify-content: flex-end;
 }
 
@@ -80,6 +81,19 @@
 	padding: 0.8rem;
 	border-radius: 0.5rem;
 	cursor: pointer;
+	outline: 0px;
+}
+
+.toolbar .source {
+	color: var(--text-color);
+	background: var(--background-color);
+	border: 0px;
+	padding: 0.8rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	text-decoration: none;
+	font-size: 12px;
+	margin-left: 15px;
 	outline: 0px;
 }
 
