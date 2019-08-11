@@ -82,6 +82,12 @@
 	border-radius: 0.5rem;
 	cursor: pointer;
 	outline: 0px;
+	display: flex;
+}
+
+.download svg,
+.source svg {
+	margin-right: 10px;
 }
 .download:hover {
 	background: var(--primary-dark);
@@ -95,6 +101,8 @@
 	border-radius: 0.5rem;
 	cursor: pointer;
 	text-decoration: none;
+	display: flex;
+
 	font-size: 12px;
 	margin-left: 15px;
 	outline: 0px;
