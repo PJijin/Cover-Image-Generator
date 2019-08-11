@@ -39,3 +39,9 @@ body {
 	cursor: pointer;
 	margin: 1.5rem 0;
 }
+
+@media screen and (max-width: 600px) {
+	.flex {
+		display: block !important;
+	}
+}
