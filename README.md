@@ -14,6 +14,8 @@ Live Preview: <a href="https://cover-image-generator.pjijin1.now.sh/" target="_B
 
 -   🖼 Insert image from computer
 
+-   🌅 Change background Image from URL, Insert from Unsplash
+
 -   💻 Quick Insert Programming Logos (Material Icons)
 
 -   🌈 Change Canvas border
