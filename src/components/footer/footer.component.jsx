@@ -8,7 +8,7 @@ export default function Footer() {
 		<footer>
 			<div>
 				Made with
-				<span role="img" aria-label="heart">
+				<span role="img" className="ml-5" aria-label="heart">
 					❤️
 				</span>
 			</div>
