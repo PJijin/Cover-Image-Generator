@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { TwitterPicker } from 'react-color';
 import { XCircle } from 'react-feather';
 import './colorpicker.styles.scss';
@@ -26,6 +27,12 @@ const ColorPicker = ({ changeSettings, name, defaultValue }) => {
 			</div>
 		</div>
 	);
+};
+
+ColorPicker.propTypes = {
+	changeSettings: PropTypes.func,
+	name: PropTypes.string,
+	defaultValue: PropTypes.string
 };
 
 export default ColorPicker;

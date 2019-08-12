@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Toggle } from 'react-powerplug';
 import { Plus, Minus } from 'react-feather';
 import InputRange from 'react-input-range';
@@ -69,6 +70,12 @@ const CanvasProperties = ({ handleChange, defaultSettings, changeSettings }) => 
 			)}
 		</Toggle>
 	);
+};
+
+CanvasProperties.propTypes = {
+	handleChange: PropTypes.func,
+	defaultSettings: PropTypes.func,
+	changeSettings: PropTypes.func
 };
 
 export default CanvasProperties;

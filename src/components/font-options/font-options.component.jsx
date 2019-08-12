@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Toggle } from 'react-powerplug';
 import { Plus, Minus } from 'react-feather';
 
@@ -41,6 +42,12 @@ const FontSize = ({ handleChange, defaultSettings, changeSettings }) => {
 			)}
 		</Toggle>
 	);
+};
+
+FontSize.propTypes = {
+	handleChange: PropTypes.func,
+	defaultSettings: PropTypes.func,
+	changeSettings: PropTypes.func
 };
 
 export default FontSize;
