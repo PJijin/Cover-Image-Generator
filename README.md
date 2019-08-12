@@ -26,13 +26,11 @@ Live Preview: <a href="https://cover-image-generator.pjijin1.now.sh/" target="_B
 
 -   🎨 Customize Background, Font colours
 
--   ⬇️ Download Image
+-   ⬇️ Download Image in PNG, SVG, JPEG Format
 
 ## 📝 To Do
 
--   Convert To PWA
-
--   Export in JPEG/SVG Format
+-   PWA Quick Insert Images Cache
 
 ## ⚙️ Usage
 
