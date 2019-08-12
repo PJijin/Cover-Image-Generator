@@ -8,5 +8,6 @@ export const defaultSettings = {
 	height: 420,
 	radius: 0,
 	border: 0,
-	borderColor: '#333'
+	borderColor: '#333',
+	bgUrl: ''
 };

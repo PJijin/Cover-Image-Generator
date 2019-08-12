@@ -24,7 +24,8 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 		height,
 		radius,
 		borderColor,
-		border
+		border,
+		bgUrl
 	} = settings;
 
 	const exportPic = async () => downloadImage(capture.current, width, height);
@@ -35,7 +36,9 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 		width: `${width}px`,
 		height: `${height}px`,
 		borderRadius: `${radius}px`,
-		border: `${border}px solid ${borderColor}`
+		border: `${border}px solid ${borderColor}`,
+		backgroundImage: `url("${bgUrl}")`,
+		backgroundSize: 'cover'
 	};
 	const headingStyle = { fontSize: `${headingFontSize}px` };
 	const summaryStyle = { fontSize: `${summaryFontSize}px` };

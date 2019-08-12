@@ -39,3 +39,14 @@ input[type='file'] {
 	margin-top: 20px;
 	margin-left: 40px;
 }
+
+input[type='url'] {
+	width: 100%;
+	height: 25px;
+	margin-top: 10px;
+	background: var(--background-color);
+	color: var(--text-color);
+	border: 0px;
+	padding: 0.3rem 0.4rem;
+	border-radius: 0.2rem;
+}
