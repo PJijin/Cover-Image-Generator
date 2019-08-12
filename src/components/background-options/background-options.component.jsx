@@ -9,7 +9,7 @@ import 'react-input-range/lib/css/index.css';
 import './background-options.styles.scss';
 
 const BackgroundOptions = ({ handleChange, defaultSettings, changeSettings }) => {
-	const [imageUrl, setImageUrl] = useState('https://source.unsplash.com/random/1280x807?business-work');
+	const [imageUrl, setImageUrl] = useState('https://source.unsplash.com/random/1280x807?programming');
 	const [category, setCategory] = useState('programming');
 	const { background } = defaultSettings;
 
@@ -81,6 +81,7 @@ const BackgroundOptions = ({ handleChange, defaultSettings, changeSettings }) =>
 									<CategoryButton name="Programming" slug="programming" />
 									<CategoryButton name="Business" slug="business-work" />
 									<CategoryButton name="Nature" slug="nature" />
+									<CategoryButton name="Laptop" slug="mac" />
 								</div>
 							</div>
 						</div>
