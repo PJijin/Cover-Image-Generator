@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 
-import ColorPicker from '../color-picker/colorpicker.component';
 import LabelOption from '../label-option/label-option.component';
 import { defaultSettings } from '../../contexts/settings.utils';
 import SettingsContext from '../../contexts/settings.context.js';
@@ -31,18 +30,6 @@ const Options = ({ updateSettings }) => {
 	return (
 		<div className="options">
 			<h4>Options</h4>
-
-			<LabelOption name="Background">
-				<ColorPicker
-					defaultValue={defaultSettings.background}
-					changeSettings={changeSettings}
-					name="background"
-				/>
-			</LabelOption>
-
-			<LabelOption name="Font Color">
-				<ColorPicker defaultValue={defaultSettings.color} changeSettings={changeSettings} name="color" />
-			</LabelOption>
 
 			<FontSize defaultSettings={defaultSettings} handleChange={handleChange} />
 
