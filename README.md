@@ -30,7 +30,7 @@ Live Preview: <a href="https://cover-image-generator.pjijin1.now.sh/" target="_B
 
 -   Export in JPEG/SVG Format
 
-# ⚙️ Usage
+## ⚙️ Usage
 
 You can use the online version to generate cover image. <a href="https://cover-image-generator.pjijin1.now.sh/" target="_BLANK">Click Here</a>
 
@@ -40,10 +40,10 @@ OR
 2. Run `npm install`
 3. Run `npm start`
 
-# 🤝 Contributing
+## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome! 😍
 
-# Show your support
+## Show your support
 
 Give a ⭐️ if this project helped you! 🥰

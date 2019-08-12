@@ -50,9 +50,9 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 					<Download size="14" /> Download Image
 				</button>
 
-				<Link className="source" icon="github" href="https://github.com/PJijin/Cover-Image-Generator/" />
+				<Link className="source" icon="github" url="https://github.com/PJijin/Cover-Image-Generator/" />
 
-				<Link className="source" icon="coffee" href="https://www.buymeacoffee.com/PJijin/" />
+				<Link className="source" icon="coffee" url="https://www.buymeacoffee.com/PJijin/" />
 			</div>
 			<div className="center" ref={capture}>
 				<div className="design-frame" style={containerStyle}>
