@@ -15,7 +15,7 @@ const FontSize = ({ handleChange, defaultSettings }) => {
 						{on ? <Minus size="12" /> : <Plus size="12" />} Font Size
 					</div>
 					{on && (
-						<>
+						<div className="options-toggle">
 							<LabelOption name="Heading Font Size">
 								<NumberInput
 									handleChange={handleChange}
@@ -30,7 +30,7 @@ const FontSize = ({ handleChange, defaultSettings }) => {
 									defaultValue={summaryFontSize}
 								/>
 							</LabelOption>
-						</>
+						</div>
 					)}
 				</>
 			)}

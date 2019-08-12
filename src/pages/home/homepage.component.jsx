@@ -20,15 +20,17 @@ const Home = () => {
 			<div className="flex home">
 				<SettingsContext.Provider value={settings}>
 					<Options updateSettings={updateSettings} />
-					<Design
-						settings={settings}
-						updateSettings={updateSettings}
-						toggleMode={darkMode.toggle}
-						currentMode={darkMode}
-					/>
+					<div>
+						<Design
+							settings={settings}
+							updateSettings={updateSettings}
+							toggleMode={darkMode.toggle}
+							currentMode={darkMode}
+						/>
+						<Footer />
+					</div>
 				</SettingsContext.Provider>
 			</div>
-			<Footer />
 		</>
 	);
 };

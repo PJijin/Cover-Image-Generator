@@ -21,7 +21,7 @@ const CanvasProperties = ({ handleChange, defaultSettings, changeSettings }) => 
 						{on ? <Minus size="12" /> : <Plus size="12" />} Canvas Properties
 					</div>
 					{on && (
-						<>
+						<div className="options-toggle">
 							<LabelOption name="Width">
 								<NumberInput handleChange={handleChange} name="width" defaultValue={width} />
 							</LabelOption>
@@ -77,7 +77,7 @@ const CanvasProperties = ({ handleChange, defaultSettings, changeSettings }) => 
 									}}
 								/>
 							</div>
-						</>
+						</div>
 					)}
 				</>
 			)}

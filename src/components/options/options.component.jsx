@@ -1,12 +1,11 @@
 import React, { useContext } from 'react';
 
-import LabelOption from '../label-option/label-option.component';
 import { defaultSettings } from '../../contexts/settings.utils';
 import SettingsContext from '../../contexts/settings.context.js';
-import Gallery from '../gallery/gallery.component';
 import FontSize from '../font-size/font-size.component';
 import CanvasProperties from '../canvas-properties/canvas-properties.component';
 import './options.styles.scss';
+import ImageOptions from '../image-options/image-options.components';
 
 const Options = ({ updateSettings }) => {
 	const settings = useContext(SettingsContext);
@@ -31,22 +30,15 @@ const Options = ({ updateSettings }) => {
 		<div className="options">
 			<h4>Options</h4>
 
-			<FontSize defaultSettings={defaultSettings} handleChange={handleChange} />
-
 			<CanvasProperties
 				defaultSettings={defaultSettings}
 				handleChange={handleChange}
 				changeSettings={changeSettings}
 			/>
 
-			<LabelOption name="Image">
-				<input type="file" name="images" onChange={handleImage} accept="image/x-png,image/gif,image/jpeg" />
-			</LabelOption>
+			<FontSize defaultSettings={defaultSettings} handleChange={handleChange} />
 
-			<h5>Quick Insert</h5>
-			<div className="stickers">
-				<Gallery insertImage={insertImage} />
-			</div>
+			<ImageOptions handleImage={handleImage} insertImage={insertImage} />
 		</div>
 	);
 };

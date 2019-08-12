@@ -36,6 +36,13 @@ body {
 	margin: 1.5rem 0;
 }
 
+.options-toggle {
+	padding: 0 1rem;
+	padding-bottom: 2rem;
+	background: var(--secondary-hover);
+	border-radius: 5px;
+}
+
 a svg {
 	color: var(--text-color);
 }
