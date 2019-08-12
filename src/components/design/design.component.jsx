@@ -1,5 +1,6 @@
 import React, { useContext, useRef } from 'react';
 import { Sun, Moon, Download } from 'react-feather';
+import GitHubButton from 'react-github-button';
 
 import { downloadImage, deleteImageFromArray } from './design.util';
 import SettingsContext from '../../contexts/settings.context';
@@ -7,8 +8,9 @@ import DraggableComponent from '../draggable/draggable.component';
 import Heading from '../heading/heading.component';
 import SubHeading from '../sub-heading/sub-heading.component';
 import FrameImage from '../frame-image/frame-image.component';
-import './design.styles.scss';
 import Link from '../link/link.component';
+
+import './design.styles.scss';
 
 const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 	const settings = useContext(SettingsContext);
@@ -58,6 +60,10 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 				<Link className="source" icon="github" url="https://github.com/PJijin/Cover-Image-Generator/" />
 
 				<Link className="source" icon="coffee" url="https://www.buymeacoffee.com/PJijin/" />
+
+				<div className="stargazers">
+					<GitHubButton type="stargazers" size="medium" namespace="pjijin" repo="Cover-Image-Generator" />
+				</div>
 			</div>
 			<div className="center" ref={capture}>
 				<div className="design-frame" style={containerStyle}>

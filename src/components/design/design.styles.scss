@@ -106,6 +106,19 @@
 	outline: 0px;
 }
 
+.stargazers {
+	border: 0px;
+	padding: 0.8rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	text-decoration: none;
+	display: flex;
+
+	font-size: 12px;
+	margin-left: 15px;
+	outline: 0px;
+}
+
 .source:hover,
 .toggle-mode:hover {
 	background: var(--secondary-hover) !important;
