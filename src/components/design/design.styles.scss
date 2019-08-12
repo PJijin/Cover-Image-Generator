@@ -8,15 +8,14 @@
 
 .movable .handle {
 	width: 25px;
-	background: url('./move.svg') no-repeat;
 	height: 18px;
 	fill: white;
 	display: none;
+	top: -10px;
 }
 
 .movable .delete {
 	width: 25px;
-	background: url('./move.svg') no-repeat;
 	height: 18px;
 	fill: white;
 	display: none;
