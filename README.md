@@ -32,6 +32,10 @@ Live Preview: <a href="https://cover-image-generator.pjijin1.now.sh/" target="_B
 
 -   PWA Quick Insert Images Cache
 
+-   Font Selection Option
+
+-   Text Shadow Option
+
 ## ⚙️ Usage
 
 You can use the online version to generate cover image. <a href="https://cover-image-generator.pjijin1.now.sh/" target="_BLANK">Click Here</a>
