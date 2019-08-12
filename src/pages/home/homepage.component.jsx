@@ -20,7 +20,7 @@ const Home = () => {
 			<div className="flex home">
 				<SettingsContext.Provider value={settings}>
 					<Options updateSettings={updateSettings} />
-					<div className="scroll">
+					<div>
 						<Design
 							settings={settings}
 							updateSettings={updateSettings}

@@ -1,0 +1,16 @@
+.default-btn {
+	font-size: 10px;
+	font-family: 'Montserrat';
+	margin: 15px 0px;
+	background: var(--background-color);
+	border: 0px;
+	border-radius: 4px;
+	padding: 3px 5px;
+	cursor: pointer;
+	display: flex;
+	margin-right: 3px;
+	outline: 0;
+}
+.default-btn span {
+	padding-left: 5px;
+}
