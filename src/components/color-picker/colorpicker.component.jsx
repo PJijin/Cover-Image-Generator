@@ -21,7 +21,7 @@ const ColorPicker = ({ changeSettings, name, defaultValue }) => {
 					{toggle && <XCircle size="14" />}
 				</div>
 				<div className="picker">
-					{toggle && <TwitterPicker color={defaultValue} onChange={updateSettigs} triangle="show" />}
+					{toggle && <TwitterPicker color={defaultValue} onChange={updateSettigs} triangle="hide" />}
 				</div>
 			</div>
 		</div>
