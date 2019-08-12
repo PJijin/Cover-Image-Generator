@@ -25,10 +25,11 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 		radius,
 		borderColor,
 		border,
-		bgUrl
+		bgUrl,
+		exportExt
 	} = settings;
 
-	const exportPic = async () => downloadImage(capture.current, width, height);
+	const exportPic = async () => downloadImage(capture.current, width, height, exportExt);
 	const deleteImage = imageToDelete => updateSettings(images, deleteImageFromArray(images, imageToDelete));
 	const containerStyle = {
 		background,
@@ -38,7 +39,8 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 		borderRadius: `${radius}px`,
 		border: `${border}px solid ${borderColor}`,
 		backgroundImage: `url("${bgUrl}")`,
-		backgroundSize: 'cover'
+		backgroundSize: 'cover',
+		backgroundRepeat: 'no-repeat'
 	};
 	const headingStyle = { fontSize: `${headingFontSize}px` };
 	const summaryStyle = { fontSize: `${summaryFontSize}px` };

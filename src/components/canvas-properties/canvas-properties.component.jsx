@@ -30,6 +30,14 @@ const CanvasProperties = ({ handleChange, defaultSettings, changeSettings }) => 
 								<NumberInput handleChange={handleChange} name="height" defaultValue={height} />
 							</LabelOption>
 
+							<LabelOption name="Format">
+								<select onChange={handleChange} name="exportExt">
+									<option value="png">PNG</option>
+									<option value="jpeg">JPG</option>
+									<option value="svg">SVG</option>
+								</select>
+							</LabelOption>
+
 							<LabelOption name="Border">
 								<NumberInput handleChange={handleChange} name="border" defaultValue={border} />
 							</LabelOption>

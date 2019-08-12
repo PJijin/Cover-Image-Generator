@@ -9,5 +9,6 @@ export const defaultSettings = {
 	radius: 10,
 	border: 0,
 	borderColor: '#333',
-	bgUrl: ''
+	bgUrl: '',
+	exportExt: 'png'
 };

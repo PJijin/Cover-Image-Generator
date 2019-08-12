@@ -17,10 +17,17 @@ export const downloadImage = (node, width, height, type = 'png') => {
 			link.href = 'data:' + dataUrl;
 			link.click();
 		});
-	} else {
+	} else if (type === 'jpeg') {
 		domtoimage.toJpeg(node, config).then(function(dataUrl) {
 			let link = document.createElement('a');
-			link.download = 'screenshot.png';
+			link.download = 'screenshot.jpeg';
+			link.href = 'data:' + dataUrl;
+			link.click();
+		});
+	} else if (type === 'svg') {
+		domtoimage.toSvg(node, config).then(function(dataUrl) {
+			let link = document.createElement('a');
+			link.download = 'screenshot.svg';
 			link.href = 'data:' + dataUrl;
 			link.click();
 		});
