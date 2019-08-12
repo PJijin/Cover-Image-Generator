@@ -11,14 +11,14 @@ import './canvas-properties.styles.scss';
 
 const CanvasProperties = ({ handleChange, defaultSettings, changeSettings }) => {
 	const [radius, setRadius] = useState(defaultSettings.radius);
-	const { width, height, border, borderColor, bgUrl, color, background } = defaultSettings;
+	const { width, height, border, borderColor } = defaultSettings;
 
 	return (
 		<Toggle initial={false}>
 			{({ on, toggle }) => (
 				<>
 					<div className="toggle" onClick={toggle} checked={on}>
-						{on ? <Minus size="12" /> : <Plus size="12" />} Canvas Properties
+						{on ? <Minus size="12" /> : <Plus size="12" />} Properties
 					</div>
 					{on && (
 						<div className="options-toggle">
@@ -29,28 +29,6 @@ const CanvasProperties = ({ handleChange, defaultSettings, changeSettings }) => 
 							<LabelOption name="Height">
 								<NumberInput handleChange={handleChange} name="height" defaultValue={height} />
 							</LabelOption>
-
-							<LabelOption name="Background">
-								<ColorPicker
-									defaultValue={background}
-									changeSettings={changeSettings}
-									name="background"
-								/>
-							</LabelOption>
-
-							<LabelOption name="Font Color">
-								<ColorPicker defaultValue={color} changeSettings={changeSettings} name="color" />
-							</LabelOption>
-
-							<div>
-								<h5>Background Image URL</h5>
-								<input
-									type="url"
-									placeholder="Background Image URL"
-									onChange={handleChange}
-									name="bgUrl"
-								/>
-							</div>
 
 							<LabelOption name="Border">
 								<NumberInput handleChange={handleChange} name="border" defaultValue={border} />

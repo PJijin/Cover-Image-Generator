@@ -1,3 +1,7 @@
+.d-f {
+	display: flex;
+}
+
 .j-sb {
 	justify-content: space-between;
 }
@@ -10,6 +14,8 @@
 	padding: 1rem;
 	border-radius: 0.5rem;
 	margin: 1rem;
+	height: 100vh;
+	overflow-y: scroll;
 }
 
 .options h4 {

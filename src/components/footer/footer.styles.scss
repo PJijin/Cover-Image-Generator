@@ -22,3 +22,7 @@ footer a {
 	margin-right: 10px;
 	margin-top: 10px;
 }
+
+footer a:hover svg {
+	fill: var(--primary);
+}

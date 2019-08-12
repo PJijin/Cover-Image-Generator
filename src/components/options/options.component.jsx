@@ -2,10 +2,11 @@ import React, { useContext } from 'react';
 
 import { defaultSettings } from '../../contexts/settings.utils';
 import SettingsContext from '../../contexts/settings.context.js';
-import FontSize from '../font-size/font-size.component';
+import FontOptions from '../font-options/font-options.component';
 import CanvasProperties from '../canvas-properties/canvas-properties.component';
 import './options.styles.scss';
 import ImageOptions from '../image-options/image-options.components';
+import BackgroundOptions from '../background-options/background-options.component';
 
 const Options = ({ updateSettings }) => {
 	const settings = useContext(SettingsContext);
@@ -35,8 +36,17 @@ const Options = ({ updateSettings }) => {
 				handleChange={handleChange}
 				changeSettings={changeSettings}
 			/>
+			<BackgroundOptions
+				defaultSettings={defaultSettings}
+				handleChange={handleChange}
+				changeSettings={changeSettings}
+			/>
 
-			<FontSize defaultSettings={defaultSettings} handleChange={handleChange} />
+			<FontOptions
+				defaultSettings={defaultSettings}
+				handleChange={handleChange}
+				changeSettings={changeSettings}
+			/>
 
 			<ImageOptions handleImage={handleImage} insertImage={insertImage} />
 		</div>
