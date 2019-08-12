@@ -28,6 +28,8 @@ Live Preview: <a href="https://cover-image-generator.pjijin1.now.sh/" target="_B
 
 ## 📝 To Do
 
+-   Convert To PWA
+
 -   Export in JPEG/SVG Format
 
 ## ⚙️ Usage
