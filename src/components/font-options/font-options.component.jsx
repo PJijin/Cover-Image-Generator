@@ -46,7 +46,7 @@ const FontSize = ({ handleChange, defaultSettings, changeSettings }) => {
 
 FontSize.propTypes = {
 	handleChange: PropTypes.func,
-	defaultSettings: PropTypes.func,
+	defaultSettings: PropTypes.object,
 	changeSettings: PropTypes.func
 };
 

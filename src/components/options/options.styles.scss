@@ -61,7 +61,7 @@ input[type='url'] {
 }
 
 select {
-	width: 55px;
+	min-width: 55px;
 	height: 25px;
 	margin-top: 10px;
 	background: var(--background-color);

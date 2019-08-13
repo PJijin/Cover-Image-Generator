@@ -12,7 +12,42 @@ import './canvas-properties.styles.scss';
 
 const CanvasProperties = ({ handleChange, defaultSettings, changeSettings }) => {
 	const [radius, setRadius] = useState(defaultSettings.radius);
-	const { width, height, border, borderColor } = defaultSettings;
+	const [width, setWidth] = useState(defaultSettings.width);
+	const [height, setHeight] = useState(defaultSettings.height);
+	const { border, borderColor } = defaultSettings;
+
+	const handleBlog = e => {
+		let widthVal;
+		let height;
+		if (e.target.value === 'dev') {
+			widthVal = ['1000'];
+			height = ['420'];
+		} else if (e.target.value === 'hashnode') {
+			widthVal = ['800'];
+			height = ['420'];
+		} else if (e.target.value === 'medium') {
+			widthVal = ['1000'];
+			height = ['500'];
+		}
+		console.log(e.target.value, widthVal, height);
+		setWidth(widthVal);
+		changeSettings('width', widthVal);
+		setHeight(height);
+		changeSettings('height', height);
+	};
+
+	const handleValueInputChange = e => {
+		if (e.target.name === 'width') {
+			let widths = [e.target.value];
+			console.log(widths);
+			setWidth(widths);
+			changeSettings('width', width);
+		} else {
+			let height = [e.target.value];
+			setHeight(height);
+			changeSettings('height', height);
+		}
+	};
 
 	return (
 		<Toggle initial={false}>
@@ -23,12 +58,30 @@ const CanvasProperties = ({ handleChange, defaultSettings, changeSettings }) => 
 					</div>
 					{on && (
 						<div className="options-toggle">
+							<LabelOption name="Blog">
+								<select onChange={handleBlog} name="Blog">
+									<option value="dev">Dev.to</option>
+									<option value="hashnode">HashNode</option>
+									<option value="medium">Medium</option>
+								</select>
+							</LabelOption>
+
 							<LabelOption name="Width">
-								<NumberInput handleChange={handleChange} name="width" defaultValue={width} />
+								<NumberInput
+									handleChange={handleValueInputChange}
+									name="width"
+									defaultValue={width}
+									value={width}
+								/>
 							</LabelOption>
 
 							<LabelOption name="Height">
-								<NumberInput handleChange={handleChange} name="height" defaultValue={height} />
+								<NumberInput
+									handleChange={handleValueInputChange}
+									name="height"
+									defaultValue={height}
+									value={height}
+								/>
 							</LabelOption>
 
 							<LabelOption name="Format">
@@ -74,7 +127,7 @@ const CanvasProperties = ({ handleChange, defaultSettings, changeSettings }) => 
 
 CanvasProperties.propTypes = {
 	handleChange: PropTypes.func,
-	defaultSettings: PropTypes.func,
+	defaultSettings: PropTypes.object,
 	changeSettings: PropTypes.func
 };
 

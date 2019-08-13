@@ -62,7 +62,7 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 				<Link className="source" icon="coffee" url="https://www.buymeacoffee.com/PJijin/" />
 
 				<div className="stargazers">
-					<GitHubButton type="stargazers" size="medium" namespace="pjijin" repo="Cover-Image-Generator" />
+					<GitHubButton type="stargazers" namespace="pjijin" repo="Cover-Image-Generator" />
 				</div>
 			</div>
 			<div className="center" ref={capture}>

@@ -95,7 +95,7 @@ const BackgroundOptions = ({ handleChange, defaultSettings, changeSettings }) =>
 
 BackgroundOptions.propTypes = {
 	handleChange: PropTypes.func,
-	defaultSettings: PropTypes.func,
+	defaultSettings: PropTypes.object,
 	changeSettings: PropTypes.func
 };
 

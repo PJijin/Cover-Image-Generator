@@ -14,7 +14,6 @@ const Home = () => {
 	const darkMode = useDarkMode(false);
 
 	const updateSettings = (set, value) => setSettings({ ...settings, [set]: value });
-
 	return (
 		<>
 			<div className="flex home">
