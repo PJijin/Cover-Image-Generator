@@ -8,11 +8,12 @@ import './options.styles.scss';
 import ImageOptions from '../image-options/image-options.components';
 import BackgroundOptions from '../background-options/background-options.component';
 
-const Options = ({ updateSettings }) => {
+const Options = ({ updateSettings, massUpdateSettings }) => {
 	const settings = useContext(SettingsContext);
 
-	const insertImage = e => updateSettings('images', [...settings.images, `/icons/${e}`]);
-	const handleChange = e => updateSettings([e.target.name], e.target.value);
+	const changeSettings = (name, value) => updateSettings(name, value);
+	const insertImage = e => changeSettings('images', [...settings.images, `/icons/${e}`]);
+	const handleChange = e => changeSettings([e.target.name], e.target.value);
 
 	const handleImage = async e => {
 		const name = [e.target.name];
@@ -20,7 +21,7 @@ const Options = ({ updateSettings }) => {
 			var reader = new FileReader();
 			reader.onload = e => {
 				const value = [...settings.images, e.target.result];
-				updateSettings([name], value);
+				changeSettings([name], value);
 			};
 			reader.readAsDataURL(e.target.files[0]);
 		}
@@ -33,6 +34,7 @@ const Options = ({ updateSettings }) => {
 			<CanvasProperties
 				defaultSettings={defaultSettings}
 				handleChange={handleChange}
+				massUpdateSettings={massUpdateSettings}
 				changeSettings={updateSettings}
 			/>
 			<BackgroundOptions

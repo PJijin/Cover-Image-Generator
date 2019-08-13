@@ -10,7 +10,7 @@ import NumberInput from '../number-input/number-input.component';
 import ColorPicker from '../color-picker/colorpicker.component';
 import './canvas-properties.styles.scss';
 
-const CanvasProperties = ({ handleChange, defaultSettings, changeSettings }) => {
+const CanvasProperties = ({ handleChange, defaultSettings, changeSettings, massUpdateSettings }) => {
 	const [radius, setRadius] = useState(defaultSettings.radius);
 	const [width, setWidth] = useState(defaultSettings.width);
 	const [height, setHeight] = useState(defaultSettings.height);
@@ -31,7 +31,7 @@ const CanvasProperties = ({ handleChange, defaultSettings, changeSettings }) => 
 		}
 		setWidth(widthVal);
 		setHeight(heightVal);
-		changeSettings({ width: widthVal, height: heightVal }, {});
+		massUpdateSettings({ width: widthVal, height: heightVal });
 	};
 
 	const handleValueInputChange = e => {
