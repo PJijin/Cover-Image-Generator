@@ -32,8 +32,8 @@ const CanvasProperties = ({ handleChange, defaultSettings, changeSettings }) => 
 		console.log(e.target.value, widthVal, height);
 		setWidth(widthVal);
 		changeSettings('width', widthVal);
-		setHeight(height);
-		changeSettings('height', height);
+		// setHeight(height);
+		// changeSettings('height', height);
 	};
 
 	const handleValueInputChange = e => {
