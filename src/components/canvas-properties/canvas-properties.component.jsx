@@ -16,30 +16,27 @@ const CanvasProperties = ({ handleChange, defaultSettings, changeSettings }) => 
 	const [height, setHeight] = useState(defaultSettings.height);
 	const { border, borderColor } = defaultSettings;
 
-	const handleBlog = e => {
+	const handleBlog = async e => {
 		let widthVal;
-		let height;
+		let heightVal;
 		if (e.target.value === 'dev') {
 			widthVal = ['1000'];
-			height = ['420'];
+			heightVal = ['420'];
 		} else if (e.target.value === 'hashnode') {
 			widthVal = ['800'];
-			height = ['420'];
+			heightVal = ['420'];
 		} else if (e.target.value === 'medium') {
 			widthVal = ['1000'];
-			height = ['500'];
+			heightVal = ['500'];
 		}
-		console.log(e.target.value, widthVal, height);
 		setWidth(widthVal);
-		changeSettings('width', widthVal);
-		// setHeight(height);
-		// changeSettings('height', height);
+		setHeight(heightVal);
+		changeSettings({ width: widthVal, height: heightVal }, {});
 	};
 
 	const handleValueInputChange = e => {
 		if (e.target.name === 'width') {
 			let widths = [e.target.value];
-			console.log(widths);
 			setWidth(widths);
 			changeSettings('width', width);
 		} else {

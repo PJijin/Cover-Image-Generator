@@ -13,13 +13,20 @@ const Home = () => {
 	const [settings, setSettings] = useState(defaultSettings);
 	const darkMode = useDarkMode(false);
 
-	const updateSettings = (set, value) => setSettings({ ...settings, [set]: value });
+	const updateSettings = (set, value) => {
+		if (typeof set === 'object') {
+			const newSettings = { ...settings };
+			Object.entries(set).map(el => (newSettings[el[0]] = el[1]));
+			setSettings(newSettings);
+		} else setSettings({ ...settings, [set]: value });
+	};
+
 	return (
 		<>
 			<div className="flex home">
 				<SettingsContext.Provider value={settings}>
 					<Options updateSettings={updateSettings} />
-					<div>
+					<div className="grow">
 						<Design
 							settings={settings}
 							updateSettings={updateSettings}
