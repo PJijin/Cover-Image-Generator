@@ -15,3 +15,11 @@
 .default-btn span {
 	padding-left: 5px;
 }
+
+.loading-text {
+	text-align: center;
+	justify-content: center;
+	display: flex;
+	color: var(--muted-color);
+	font-size: 12px;
+}

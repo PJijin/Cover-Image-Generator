@@ -12,6 +12,8 @@ import './background-options.styles.scss';
 const BackgroundOptions = ({ handleChange, defaultSettings, changeSettings }) => {
 	const [imageUrl, setImageUrl] = useState('https://source.unsplash.com/random/1280x807?programming');
 	const [category, setCategory] = useState('programming');
+	const [loading, setImageLoaded] = useState(true);
+
 	const { background } = defaultSettings;
 
 	const changeImageUrl = () => {
@@ -25,6 +27,8 @@ const BackgroundOptions = ({ handleChange, defaultSettings, changeSettings }) =>
 		setCategory(cat);
 		refreshImage();
 	};
+
+	const imageLoaded = () => setImageLoaded(false);
 
 	const CategoryButton = ({ name, slug }) => {
 		return (
@@ -74,10 +78,13 @@ const BackgroundOptions = ({ handleChange, defaultSettings, changeSettings }) =>
 								<LazyLoadImage
 									alt="Programming"
 									height="150px"
+									afterLoad={imageLoaded}
 									onClick={changeImageUrl}
 									src={imageUrl} // use normal <img> attributes as props
 									width="265px"
 								/>
+								{loading && <span className="loading-text">Loading...</span>}
+
 								<div className="d-f center">
 									<CategoryButton name="Programming" slug="programming" />
 									<CategoryButton name="Business" slug="business-work" />
