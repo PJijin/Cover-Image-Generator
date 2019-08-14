@@ -11,11 +11,10 @@
 
 .options {
 	width: 300px;
+	height: 100vh;
 	padding: 1rem;
-	border-radius: 0.5rem;
-	height: 90vh;
-	margin: 1rem;
 	overflow: hidden;
+	background: var(--sidebar-bg);
 }
 
 .options:hover {

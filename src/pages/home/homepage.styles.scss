@@ -3,10 +3,12 @@ body[class='dark-mode react-draggable-transparent-selection'] {
 	--primary: #0facf3;
 	--primary-dark: #10a5e8;
 	--secondary-hover: #3c4859;
+	--sidebar-bg: #090b10;
+	--plain: #1a1c25;
 
 	--text-color: #fff;
 	--background-color: #333;
-	--background-light-color: #3e3d3d;
+	--background-light-color: #0f111a;
 	--muted-color: #787373;
 }
 
@@ -14,6 +16,8 @@ body[class='light-mode'],
 body[class='light-mode react-draggable-transparent-selection'] {
 	--primary: #0facf3;
 	--primary-dark: #10a5e8;
+	--sidebar-bg: #edf0f2;
+	--plain: #ffffff;
 
 	--secondary-hover: #e9e4e4;
 	--text-color: #333;
@@ -45,7 +49,7 @@ body {
 .options-toggle {
 	padding: 0 1rem;
 	padding-bottom: 2rem;
-	background: var(--secondary-hover);
+	background: var(--plain);
 	border-radius: 5px;
 }
 

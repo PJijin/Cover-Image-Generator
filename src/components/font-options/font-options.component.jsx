@@ -14,7 +14,7 @@ const FontSize = ({ handleChange, defaultSettings, changeSettings }) => {
 			{({ on, toggle }) => (
 				<>
 					<div className="toggle" onClick={toggle} checked={on}>
-						{on ? <Minus size="12" /> : <Plus size="12" />} Font
+						<h5>{on ? <Minus size="12" /> : <Plus size="12" />} Font</h5>
 					</div>
 					{on && (
 						<div className="options-toggle">
