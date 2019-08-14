@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Toggle } from 'react-powerplug';
-import { Plus, Minus, RefreshCcw, CheckCircle } from 'react-feather';
+import { Plus, Minus, RefreshCcw, CheckCircle, Image } from 'react-feather';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import LabelOption from '../label-option/label-option.component';
@@ -43,7 +43,9 @@ const BackgroundOptions = ({ handleChange, defaultSettings, changeSettings }) =>
 			{({ on, toggle }) => (
 				<>
 					<div className="toggle" onClick={toggle} checked={on}>
-						<h5>{on ? <Minus size="12" /> : <Plus size="12" />} Background</h5>
+						<h5>
+							{on ? <Minus size="12" /> : <Plus size="12" />} <Image size="12" /> Background
+						</h5>
 					</div>
 					{on && (
 						<div className="options-toggle">

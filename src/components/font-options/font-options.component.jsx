@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Toggle } from 'react-powerplug';
-import { Plus, Minus } from 'react-feather';
+import { Plus, Minus, FileText } from 'react-feather';
 
 import ColorPicker from '../color-picker/colorpicker.component';
 import LabelOption from '../label-option/label-option.component';
@@ -14,7 +14,9 @@ const FontSize = ({ handleChange, defaultSettings, changeSettings }) => {
 			{({ on, toggle }) => (
 				<>
 					<div className="toggle" onClick={toggle} checked={on}>
-						<h5>{on ? <Minus size="12" /> : <Plus size="12" />} Font</h5>
+						<h5>
+							{on ? <Minus size="12" /> : <Plus size="12" />} <FileText size="12" /> Font
+						</h5>
 					</div>
 					{on && (
 						<div className="options-toggle">

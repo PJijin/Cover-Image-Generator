@@ -1,6 +1,6 @@
 import React from 'react';
 import { Toggle } from 'react-powerplug';
-import { Plus, Minus } from 'react-feather';
+import { Plus, Minus, FilePlus } from 'react-feather';
 
 import Gallery from '../gallery/gallery.component';
 import LabelOption from '../label-option/label-option.component';
@@ -11,7 +11,9 @@ const ImageOptions = ({ handleImage, insertImage }) => {
 			{({ on, toggle }) => (
 				<>
 					<div className="toggle" onClick={toggle} checked={on}>
-						<h5>{on ? <Minus size="12" /> : <Plus size="12" />} Insert Image</h5>
+						<h5>
+							{on ? <Minus size="12" /> : <Plus size="12" />} <FilePlus size="12" /> Insert Image
+						</h5>
 					</div>
 					{on && (
 						<div className="options-toggle">
