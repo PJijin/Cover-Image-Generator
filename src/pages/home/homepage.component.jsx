@@ -28,7 +28,7 @@ const Home = () => {
 			<div className="flex home">
 				<SettingsContext.Provider value={settings}>
 					<Options updateSettings={updateSettings} massUpdateSettings={massUpdateSettings} />
-					<div className="grow">
+					<div className="content-area">
 						<Design
 							settings={settings}
 							updateSettings={updateSettings}

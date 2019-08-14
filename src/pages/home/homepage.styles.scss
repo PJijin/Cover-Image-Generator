@@ -185,6 +185,8 @@ a svg {
 	border-width: 7px 7px 7px 0;
 }
 
-.grow {
+.content-area {
+	display: flex;
 	flex-grow: 1;
+	flex-direction: column;
 }

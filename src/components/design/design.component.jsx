@@ -48,7 +48,7 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 	const summaryStyle = { fontSize: `${summaryFontSize}px` };
 
 	return (
-		<div>
+		<>
 			<div className="toolbar">
 				<button className="toggle-mode" onClick={toggleMode}>
 					{value ? <Sun size="14" /> : <Moon size="14" />}
@@ -84,7 +84,7 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 export default Design;
