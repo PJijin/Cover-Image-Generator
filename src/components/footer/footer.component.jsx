@@ -1,5 +1,5 @@
 import React from 'react';
-import { Twitter, GitHub } from 'react-feather';
+import { Twitter, GitHub, Instagram } from 'react-feather';
 
 import './footer.styles.scss';
 
@@ -19,6 +19,10 @@ export default function Footer() {
 
 				<a href="https://github.com/pjijin" target="_BLANK" rel="noopener noreferrer">
 					<GitHub size="18" />
+				</a>
+
+				<a href="https://www.instagram.com/pjijin1/" target="_BLANK" rel="noopener noreferrer">
+					<Instagram size="18" />
 				</a>
 			</div>
 		</footer>
