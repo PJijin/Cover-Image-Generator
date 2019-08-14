@@ -6,9 +6,11 @@ Generate a cover image for your blog post online.
 ⚠️ Clear cache and check demo. On mac CMD + Shift + R, On Windows Ctrl + F5
 ```
 
-[![Cover Image Generator](https://github.com/PJijin/Cover-Image-Generator/blob/master/preview.gif?raw=true 'Cover Image Generator')]()
+[![Cover Image Generator](https://github.com/PJijin/Cover-Image-Generator/blob/master/preview.png?raw=true 'Cover Image Generator')]()
 
-Live Preview: <a href="https://cover-image-generator.pjijin1.now.sh/" target="_BLANK">Click Here</a>
+✅ Live Preview: <a href="https://cover-image-generator.pjijin1.now.sh/" target="_BLANK">Click Here</a>
+
+📹 Video Preview: <a href="https://www.youtube.com/watch?v=GGTrhgKrch8" target="_BLANK">Click Here</a>
 
 ## ✨ Features
 
