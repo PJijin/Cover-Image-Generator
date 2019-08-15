@@ -15,21 +15,27 @@ export const downloadImage = (node, width, height, type = 'png') => {
 			let link = document.createElement('a');
 			link.download = 'screenshot.png';
 			link.href = 'data:' + dataUrl;
+			document.body.appendChild(link);
 			link.click();
+			link.remove();
 		});
 	} else if (type === 'jpeg') {
 		domtoimage.toJpeg(node, config).then(function(dataUrl) {
 			let link = document.createElement('a');
 			link.download = 'screenshot.jpeg';
 			link.href = 'data:' + dataUrl;
+			document.body.appendChild(link);
 			link.click();
+			link.remove();
 		});
 	} else if (type === 'svg') {
 		domtoimage.toSvg(node, config).then(function(dataUrl) {
 			let link = document.createElement('a');
 			link.download = 'screenshot.svg';
 			link.href = 'data:' + dataUrl;
+			document.body.appendChild(link);
 			link.click();
+			link.remove();
 		});
 	}
 };
