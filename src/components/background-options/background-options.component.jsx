@@ -6,6 +6,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import LabelOption from '../label-option/label-option.component';
 import ColorPicker from '../color-picker/colorpicker.component';
+import { toDataURL } from './background.util';
 import 'react-input-range/lib/css/index.css';
 import './background-options.styles.scss';
 
@@ -17,7 +18,9 @@ const BackgroundOptions = ({ handleChange, defaultSettings, changeSettings }) =>
 	const { background } = defaultSettings;
 
 	const changeImageUrl = () => {
-		changeSettings('bgUrl', imageUrl);
+		toDataURL(imageUrl, function(dataUrl) {
+			if (dataUrl) changeSettings('bgUrl', dataUrl);
+		});
 	};
 
 	const refreshImage = () =>

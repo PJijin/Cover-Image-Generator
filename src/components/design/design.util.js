@@ -10,33 +10,21 @@ export const downloadImage = (node, width, height, type = 'png') => {
 		quality: 1
 	};
 
+	const downloadFile = (dataUrl, ext) => {
+		let link = document.createElement('a');
+		link.download = `CoverImage.${ext}`;
+		link.href = 'data:' + dataUrl;
+		document.body.appendChild(link);
+		link.click();
+		link.remove();
+	};
+
 	if (type === 'png') {
-		domtoimage.toPng(node, config).then(function(dataUrl) {
-			let link = document.createElement('a');
-			link.download = 'screenshot.png';
-			link.href = 'data:' + dataUrl;
-			document.body.appendChild(link);
-			link.click();
-			link.remove();
-		});
+		domtoimage.toPng(node, config).then(dataUrl => downloadFile(dataUrl, 'png'));
 	} else if (type === 'jpeg') {
-		domtoimage.toJpeg(node, config).then(function(dataUrl) {
-			let link = document.createElement('a');
-			link.download = 'screenshot.jpeg';
-			link.href = 'data:' + dataUrl;
-			document.body.appendChild(link);
-			link.click();
-			link.remove();
-		});
+		domtoimage.toJpeg(node, config).then(dataUrl => downloadFile(dataUrl, 'jpeg'));
 	} else if (type === 'svg') {
-		domtoimage.toSvg(node, config).then(function(dataUrl) {
-			let link = document.createElement('a');
-			link.download = 'screenshot.svg';
-			link.href = 'data:' + dataUrl;
-			document.body.appendChild(link);
-			link.click();
-			link.remove();
-		});
+		domtoimage.toSvg(node, config).then(dataUrl => downloadFile(dataUrl, 'svg'));
 	}
 };
 
