@@ -11,7 +11,7 @@ export const downloadImage = (node, width, height, type = 'png') => {
 	};
 
 	if (type === 'png') {
-		domtoimage.toJpeg(node, config).then(function(dataUrl) {
+		domtoimage.toPng(node, config).then(function(dataUrl) {
 			let link = document.createElement('a');
 			link.download = 'screenshot.png';
 			link.href = 'data:' + dataUrl;
