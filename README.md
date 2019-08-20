@@ -36,11 +36,11 @@ Generate a cover image for your blog post online.
 
 ## 📝 To Do
 
--   PWA Quick Insert Images Cache
-
 -   Font Selection Option
 
 -   Text Shadow Option
+
+-   Background darken Option
 
 ## ⚙️ Usage
 
