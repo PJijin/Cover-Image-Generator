@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Toggle } from 'react-powerplug';
+import InputRange from 'react-input-range';
 import { Plus, Minus, RefreshCcw, CheckCircle, Image } from 'react-feather';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
@@ -10,12 +11,12 @@ import { toDataURL } from './background.util';
 import 'react-input-range/lib/css/index.css';
 import './background-options.styles.scss';
 
-const BackgroundOptions = ({ handleChange, defaultSettings, changeSettings }) => {
+const BackgroundOptions = ({ handleChange, defaultSettings: { overlay, background }, changeSettings }) => {
 	const [imageUrl, setImageUrl] = useState('https://source.unsplash.com/random/1280x807?programming');
+	const [overlays, setOverlay] = useState(overlay);
+
 	const [category, setCategory] = useState('programming');
 	const [loading, setImageLoaded] = useState(true);
-
-	const { background } = defaultSettings;
 
 	const changeImageUrl = () => {
 		toDataURL(imageUrl, function(dataUrl) {
@@ -96,6 +97,22 @@ const BackgroundOptions = ({ handleChange, defaultSettings, changeSettings }) =>
 									<CategoryButton name="Nature" slug="nature" />
 									<CategoryButton name="Laptop" slug="mac" />
 								</div>
+							</div>
+
+							<div>
+								<h5>Darken Background</h5>
+								<InputRange
+									className="slider"
+									maxValue={1}
+									formatLabel={value => ''}
+									step={0.1}
+									minValue={0}
+									value={overlays}
+									onChange={value => {
+										setOverlay(value);
+										changeSettings('overlay', value);
+									}}
+								/>
 							</div>
 						</div>
 					)}

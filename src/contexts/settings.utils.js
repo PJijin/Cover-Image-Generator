@@ -11,5 +11,6 @@ export const defaultSettings = {
 	borderColor: '#333',
 	bgUrl: '',
 	exportExt: 'png',
-	font: 'Droid Sans'
+	font: 'Droid Sans',
+	overlay: 0
 };

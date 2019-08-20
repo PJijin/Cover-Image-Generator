@@ -30,7 +30,8 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 		border,
 		bgUrl,
 		exportExt,
-		font
+		font,
+		overlay
 	} = settings;
 
 	const exportPic = async () => downloadImage(capture.current, width, height, exportExt);
@@ -45,6 +46,7 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 	const containerStyle = {
 		background,
 		color,
+		boxShadow: `rgba(28, 28, 28, ${overlay}) 0px 0px 0px 2000px inset`,
 		fontFamily: `${font}`,
 		width: `${width}px`,
 		height: `${height}px`,

@@ -34,9 +34,9 @@ Generate a cover image for your blog post online.
 
 -   ⬇️ Download Image in PNG, SVG, JPEG Format
 
-## 📝 To Do
+-   🖋 Font Selection Option
 
--   Font Selection Option
+## 📝 To Do
 
 -   Text Shadow Option
 

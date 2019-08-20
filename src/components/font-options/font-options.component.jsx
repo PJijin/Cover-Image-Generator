@@ -22,6 +22,7 @@ const FontSize = ({ handleChange, defaultSettings, changeSettings }) => {
 						<div className="options-toggle">
 							<LabelOption name="Font Name">
 								<a
+									title="Font Family Name from GoogleFonts"
 									className="mt-18"
 									rel="noopener noreferrer"
 									href="https://fonts.google.com/"
