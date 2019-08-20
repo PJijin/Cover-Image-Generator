@@ -5,6 +5,10 @@
 .j-sb {
 	justify-content: space-between;
 }
+
+.mt-18 {
+	margin-top: 18px;
+}
 .color-picker {
 	margin-top: 15px;
 }
@@ -44,6 +48,7 @@ input[type='number'] {
 	background: var(--background-color);
 	color: var(--text-color);
 	border: 0px;
+	outline: 0;
 	padding: 0.3rem 0.4rem;
 	border-radius: 0.2rem;
 }
@@ -51,6 +56,7 @@ input[type='number'] {
 input[type='file'] {
 	margin-top: 20px;
 	margin-left: 40px;
+	outline: 0;
 }
 
 input[type='url'] {
@@ -60,17 +66,20 @@ input[type='url'] {
 	background: var(--background-color);
 	color: var(--text-color);
 	border: 0px;
+	outline: 0;
 	padding: 0.3rem 0.4rem;
 	border-radius: 0.2rem;
 }
 
-select {
+select,
+input[type='text'] {
 	min-width: 55px;
 	height: 25px;
 	margin-top: 10px;
 	background: var(--background-color);
 	color: var(--text-color);
 	border: 0px;
+	outline: 0;
 	padding: 0.3rem 0.4rem;
 	border-radius: 0.2rem;
 }

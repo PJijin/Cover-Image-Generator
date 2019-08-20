@@ -10,5 +10,6 @@ export const defaultSettings = {
 	border: 0,
 	borderColor: '#333',
 	bgUrl: '',
-	exportExt: 'png'
+	exportExt: 'png',
+	font: 'Droid Sans'
 };

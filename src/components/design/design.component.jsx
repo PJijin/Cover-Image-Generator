@@ -1,6 +1,7 @@
 import React, { useContext, useRef } from 'react';
 import { Sun, Moon, Download } from 'react-feather';
 import GitHubButton from 'react-github-button';
+import WebFont from 'webfontloader';
 
 import { downloadImage, deleteImageFromArray } from './design.util';
 import SettingsContext from '../../contexts/settings.context';
@@ -28,14 +29,23 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 		borderColor,
 		border,
 		bgUrl,
-		exportExt
+		exportExt,
+		font
 	} = settings;
 
 	const exportPic = async () => downloadImage(capture.current, width, height, exportExt);
 	const deleteImage = imageToDelete => updateSettings(images, deleteImageFromArray(images, imageToDelete));
+
+	if (font) {
+		try {
+			WebFont.load({ google: { families: [font] } });
+		} catch {}
+	}
+
 	const containerStyle = {
 		background,
 		color,
+		fontFamily: `${font}`,
 		width: `${width}px`,
 		height: `${height}px`,
 		borderRadius: `${radius}px`,
