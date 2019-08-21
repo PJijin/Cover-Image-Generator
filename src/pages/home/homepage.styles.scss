@@ -33,6 +33,10 @@ body {
 	padding: 0;
 }
 
+::selection {
+	background: #79ffe1;
+}
+
 .flex {
 	display: flex;
 }

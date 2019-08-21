@@ -9,7 +9,6 @@ import DraggableComponent from '../draggable/draggable.component';
 import Heading from '../heading/heading.component';
 import SubHeading from '../sub-heading/sub-heading.component';
 import FrameImage from '../frame-image/frame-image.component';
-import Link from '../link/link.component';
 
 import './design.styles.scss';
 
@@ -68,10 +67,6 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 				<button className="download" onClick={exportPic}>
 					<Download size="14" /> Download Image
 				</button>
-
-				<Link className="source" icon="github" url="https://github.com/PJijin/Cover-Image-Generator/" />
-
-				<Link className="source" icon="coffee" url="https://www.buymeacoffee.com/PJijin/" />
 
 				<div className="stargazers">
 					<GitHubButton type="stargazers" namespace="pjijin" repo="Cover-Image-Generator" />

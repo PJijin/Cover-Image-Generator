@@ -35,7 +35,7 @@ const Home = () => {
 							toggleMode={darkMode.toggle}
 							currentMode={darkMode}
 						/>
-						<Footer />
+						<Footer currentMode={darkMode} />
 					</div>
 				</SettingsContext.Provider>
 			</div>
