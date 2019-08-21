@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Toggle } from 'react-powerplug';
-import { Plus, Minus, Settings  } from 'react-feather';
+import { Plus, Minus, Settings } from 'react-feather';
 import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
 
@@ -51,7 +51,9 @@ const CanvasProperties = ({ handleChange, defaultSettings, changeSettings, massU
 			{({ on, toggle }) => (
 				<>
 					<div className="toggle" onClick={toggle} checked={on}>
-						<h5>{on ? <Minus size="12" /> : <Plus size="12" />} <Settings size="12" /> Properties</h5>
+						<h5>
+							{on ? <Minus size="12" /> : <Plus size="12" />} <Settings size="12" /> Properties
+						</h5>
 					</div>
 					{on && (
 						<div className="options-toggle">

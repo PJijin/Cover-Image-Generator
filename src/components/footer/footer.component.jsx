@@ -8,11 +8,11 @@ export default function Footer() {
 		<footer>
 			<div>
 				Made with
-				<span role="img" className="ml-5" aria-label="heart">
-					❤️
-				</span>
+				<img width="14" src="https://twemoji.maxcdn.com/2/72x72/1f496.png" alt="heart" />
+				by <a href="https://twitter.com/PJijin">@PJijin</a> &{' '}
+				<a href="https://twitter.com/JP1016v1">@JP1016v1</a>
 			</div>
-			<div className="mtb-15">
+			<div className="mtb-15 socialLinks">
 				<a href="https://twitter.com/pjijin" target="_BLANK" rel="noopener noreferrer">
 					<Twitter size="18" />
 				</a>

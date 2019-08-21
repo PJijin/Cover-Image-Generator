@@ -8,7 +8,7 @@ Generate a cover image for your blog post online.
 
 [![Cover Image Generator](https://github.com/PJijin/Cover-Image-Generator/blob/master/preview.png?raw=true 'Cover Image Generator')]()
 
-✅ Live Preview: <a href="https://cover-image-generator.pjijin1.now.sh/" target="_BLANK">Click Here</a>
+✅ Live Preview: <a href="https://blogcover.now.sh/" target="_BLANK">Click Here</a>
 
 📹 Video Preview: <a href="https://www.youtube.com/watch?v=GGTrhgKrch8" target="_BLANK">Click Here</a>
 
@@ -44,7 +44,7 @@ Generate a cover image for your blog post online.
 
 ## ⚙️ Usage
 
-You can use the online version to generate cover image. <a href="https://cover-image-generator.pjijin1.now.sh/" target="_BLANK">Click Here</a>
+You can use the online version to generate cover image. <a href="https://blogcover.now.sh/" target="_BLANK">Click Here</a>
 
 OR
 

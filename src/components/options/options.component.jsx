@@ -1,12 +1,13 @@
 import React, { useContext } from 'react';
+import { Image } from 'react-feather';
 
 import { defaultSettings } from '../../contexts/settings.utils';
 import SettingsContext from '../../contexts/settings.context.js';
 import FontOptions from '../font-options/font-options.component';
 import CanvasProperties from '../canvas-properties/canvas-properties.component';
-import './options.styles.scss';
 import ImageOptions from '../image-options/image-options.components';
 import BackgroundOptions from '../background-options/background-options.component';
+import './options.styles.scss';
 
 const Options = ({ updateSettings, massUpdateSettings }) => {
 	const settings = useContext(SettingsContext);
@@ -29,6 +30,10 @@ const Options = ({ updateSettings, massUpdateSettings }) => {
 
 	return (
 		<div className="options">
+			<h2 className="logo">
+				<Image size="24" /> <span>BlogCover</span>
+			</h2>
+
 			<h4>Options</h4>
 
 			<CanvasProperties
