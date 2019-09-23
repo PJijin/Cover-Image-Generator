@@ -12,10 +12,11 @@ Generate a cover image for your blog post online.
 
 📹 Video Preview: <a href="https://www.youtube.com/watch?v=GGTrhgKrch8" target="_BLANK">Click Here</a>
 
-  <p align="center">
-   Made with ❤️ by <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/jp1016v1?style=social">
-<img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/PJijin?style=social">
+   <p align="center">
+   Made with ❤️ by <a href="https://twitter.com/jp1016v1"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/jp1016v1?style=social"></a>
+<a href="https://twitter.com/PJijin"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/PJijin?style=social"></a>
   </p>
+ 
 
 
 ## ✨ Features
