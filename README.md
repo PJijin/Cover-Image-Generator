@@ -1,5 +1,11 @@
 # 🏙 Cover Image Generator
 
+### Other projects:
+
+- 🔖 [MarkDown](https://github.com/JP1016/Markdown) - Live Markdown Generator
+- 🗒 [Paper](https://github.com/JP1016/Paper) - A "no-cloud" note taking app with "networkless" sharing.
+- 👨‍💻 [ShowPath](https://github.com/PJijin/Show-Path) - Learning Path for Programmers
+
 Generate a cover image for your blog post online.
 
 ```
