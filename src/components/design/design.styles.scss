@@ -80,6 +80,7 @@
 	cursor: pointer;
 	outline: 0px;
 	display: flex;
+	align-items: center;
 }
 
 .download svg {
@@ -98,7 +99,7 @@
 	cursor: pointer;
 	text-decoration: none;
 	display: flex;
-
+	align-items: center;
 	font-size: 12px;
 	margin-left: 15px;
 	outline: 0px;
@@ -131,6 +132,8 @@
 	border: 0px;
 	outline: 0px;
 	margin-right: 20px;
+	display: flex;
+	align-items: center;
 }
 
 .image-wrapper {

@@ -4,25 +4,14 @@ import { Twitter, GitHub, Instagram } from 'react-feather';
 import './footer.styles.scss';
 
 export default function Footer(currentMode) {
-	const mode = currentMode.currentMode.value;
 	return (
 		<footer>
-			<a
-				className="ph-badge"
-				href="https://www.producthunt.com/posts/blog-cover?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-blog-cover"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<img
-					src={`https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=165120&theme=${
-						mode ? 'dark' : 'light'
-					}`}
-					alt="Blog Cover Generator for your blog post | Product Hunt Embed"
-					width="250px"
-					height="54px"
-				/>
-			</a>
 			<div>
+				<a href="https://codekeep.io/screenshot" target="_BLANK" rel="noopener noreferrer">
+					Generate code screenshot with CodeKeep Screenshot
+				</a>
+			</div>
+			<div className="mtb-15">
 				Made with
 				<img width="14" src="https://twemoji.maxcdn.com/2/72x72/1f496.png" alt="heart" />
 				by <a href="https://twitter.com/PJijin">@PJijin</a> &{' '}
@@ -37,7 +26,7 @@ export default function Footer(currentMode) {
 					<GitHub size="18" />
 				</a>
 
-				<a href="https://www.instagram.com/pjijin1/" target="_BLANK" rel="noopener noreferrer">
+				<a href="https://www.instagram.com/pjijin1/" target="_BLANK" rel="noopener 	">
 					<Instagram size="18" />
 				</a>
 			</div>

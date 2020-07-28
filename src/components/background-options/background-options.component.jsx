@@ -19,7 +19,7 @@ const BackgroundOptions = ({ handleChange, defaultSettings: { overlay, backgroun
 	const [loading, setImageLoaded] = useState(true);
 
 	const changeImageUrl = () => {
-		toDataURL(imageUrl, function(dataUrl) {
+		toDataURL(imageUrl, function (dataUrl) {
 			if (dataUrl) changeSettings('bgUrl', dataUrl);
 		});
 	};
@@ -27,7 +27,7 @@ const BackgroundOptions = ({ handleChange, defaultSettings: { overlay, backgroun
 	const refreshImage = () =>
 		setImageUrl(`https://source.unsplash.com/random/1280x807?${category}&time=${Math.random()}`);
 
-	const changeCategory = cat => {
+	const changeCategory = (cat) => {
 		setCategory(cat);
 		refreshImage();
 	};
@@ -104,11 +104,11 @@ const BackgroundOptions = ({ handleChange, defaultSettings: { overlay, backgroun
 								<InputRange
 									className="slider"
 									maxValue={1}
-									formatLabel={value => ''}
+									formatLabel={(value) => ''}
 									step={0.1}
 									minValue={0}
 									value={overlays}
-									onChange={value => {
+									onChange={(value) => {
 										setOverlay(value);
 										changeSettings('overlay', value);
 									}}
@@ -125,7 +125,7 @@ const BackgroundOptions = ({ handleChange, defaultSettings: { overlay, backgroun
 BackgroundOptions.propTypes = {
 	handleChange: PropTypes.func,
 	defaultSettings: PropTypes.object,
-	changeSettings: PropTypes.func
+	changeSettings: PropTypes.func,
 };
 
 export default BackgroundOptions;

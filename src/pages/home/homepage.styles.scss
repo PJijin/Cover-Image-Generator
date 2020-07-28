@@ -10,6 +10,9 @@ body[class='dark-mode react-draggable-transparent-selection'] {
 	--background-color: #333;
 	--background-light-color: #0f111a;
 	--muted-color: #787373;
+
+	--scrollbar: #191c25;
+	--scrollbar-thumb: #ccc;
 }
 
 body[class='light-mode'],
@@ -24,6 +27,8 @@ body[class='light-mode react-draggable-transparent-selection'] {
 	--background-color: #f1f1f1;
 	--background-light-color: #fcfcfc;
 	--muted-color: #999595;
+	--scrollbar: #fafafa;
+	--scrollbar-thumb: #ddd;
 }
 
 body {
@@ -31,6 +36,22 @@ body {
 	color: var(--text-color) !important;
 	margin: 0;
 	padding: 0;
+}
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: var(--scrollbar);
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+	background-color: var(--scrollbar);
+}
+
+::-webkit-scrollbar-thumb {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: var(--scrollbar-thumb);
 }
 
 ::selection {

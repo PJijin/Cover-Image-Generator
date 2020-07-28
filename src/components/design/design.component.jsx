@@ -30,17 +30,21 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 		bgUrl,
 		exportExt,
 		font,
-		overlay
+		overlay,
 	} = settings;
 
 	const exportPic = async () => downloadImage(capture.current, width, height, exportExt);
-	const deleteImage = imageToDelete => updateSettings(images, deleteImageFromArray(images, imageToDelete));
+	const deleteImage = (imageToDelete) => updateSettings(images, deleteImageFromArray(images, imageToDelete));
 
 	if (font) {
 		try {
 			WebFont.load({ google: { families: [font] } });
 		} catch {}
 	}
+
+	const getBase64Image = (img) => {
+		return img;
+	};
 
 	const containerStyle = {
 		background,
@@ -51,9 +55,9 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 		height: `${height}px`,
 		borderRadius: `${radius}px`,
 		border: `${border}px solid ${borderColor}`,
-		backgroundImage: `url("${bgUrl}")`,
+		backgroundImage: `url("${getBase64Image(bgUrl)}")`,
 		backgroundSize: 'cover',
-		backgroundRepeat: 'no-repeat'
+		backgroundRepeat: 'no-repeat',
 	};
 	const headingStyle = { fontSize: `${headingFontSize}px` };
 	const summaryStyle = { fontSize: `${summaryFontSize}px` };
@@ -84,7 +88,7 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 						</DraggableComponent>
 
 						<div className="image-wrapper">
-							{images.map(image => (
+							{images.map((image) => (
 								<FrameImage image={image} key={image} deleteImage={deleteImage} />
 							))}
 						</div>
