@@ -26,7 +26,7 @@ export default function Footer(currentMode) {
 					<GitHub size="18" />
 				</a>
 
-				<a href="https://www.instagram.com/pjijin1/" target="_BLANK" rel="noopener 	">
+				<a href="https://www.instagram.com/pjijin1/" target="_BLANK" rel="noopener 	noreferrer">
 					<Instagram size="18" />
 				</a>
 			</div>
