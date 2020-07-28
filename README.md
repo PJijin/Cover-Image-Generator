@@ -1,12 +1,17 @@
 # 🏙 Cover Image Generator
 
+Generate a cover image for your blog post online.
+
+
 ### Other projects:
 
 - 🔖 [MarkDown](https://github.com/JP1016/Markdown) - Live Markdown Generator
 - 🗒 [Paper](https://github.com/JP1016/Paper) - A "no-cloud" note taking app with "networkless" sharing.
 - 👨‍💻 [ShowPath](https://github.com/PJijin/Show-Path) - Learning Path for Programmers
 
-Generate a cover image for your blog post online.
+<p align="center">
+ <b>  <a href="https://codekeep.io/screenshot">Generate code screenshot with CodeKeep Screenshot</a>   </b>
+</p>
 
 ```
 ⚠️ Clear cache and check demo. On mac CMD + Shift + R, On Windows Ctrl + F5
