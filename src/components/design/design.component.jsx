@@ -42,10 +42,6 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 		} catch {}
 	}
 
-	const getBase64Image = (img) => {
-		return img;
-	};
-
 	const containerStyle = {
 		background,
 		color,
@@ -55,7 +51,7 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 		height: `${height}px`,
 		borderRadius: `${radius}px`,
 		border: `${border}px solid ${borderColor}`,
-		backgroundImage: `url("${getBase64Image(bgUrl)}")`,
+		backgroundImage: `url("${bgUrl}")`,
 		backgroundSize: 'cover',
 		backgroundRepeat: 'no-repeat',
 	};

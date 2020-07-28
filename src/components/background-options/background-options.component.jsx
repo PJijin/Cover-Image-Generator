@@ -66,7 +66,11 @@ const BackgroundOptions = ({ handleChange, defaultSettings: { overlay, backgroun
 								<input
 									type="url"
 									placeholder="Background Image URL"
-									onChange={handleChange}
+									onChange={(e) => {
+										toDataURL(e.target.value, function (dataUrl) {
+											if (dataUrl) changeSettings('bgUrl', dataUrl);
+										});
+									}}
 									name="bgUrl"
 								/>
 							</div>
