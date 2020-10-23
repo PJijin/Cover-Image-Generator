@@ -4,7 +4,7 @@
 	"private": true,
 	"dependencies": {
 		"dom-to-image": "^2.6.0",
-		"node-sass": "^4.12.0",
+		"node-sass": "^4.13.1",
 		"prop-types": "^15.7.2",
 		"react": "^17.0.1",
 		"react-color": "^2.17.3",
