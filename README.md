@@ -54,11 +54,12 @@ Generate a cover image for your blog post online.
 
 -   🖋 Font Selection Option
 
+-   Background darken Option
+
 ## 📝 To Do
 
 -   Text Shadow Option
 
--   Background darken Option
 
 ## ⚙️ Usage
 
