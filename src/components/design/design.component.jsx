@@ -24,6 +24,7 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 		images,
 		width,
 		height,
+		file_name,
 		radius,
 		borderColor,
 		border,
@@ -33,7 +34,7 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 		overlay,
 	} = settings;
 
-	const exportPic = async () => downloadImage(capture.current, width, height, exportExt);
+	const exportPic = async () => downloadImage(capture.current, width, height, exportExt,file_name);
 	const deleteImage = (imageToDelete) => updateSettings(images, deleteImageFromArray(images, imageToDelete));
 
 	if (font) {
@@ -60,6 +61,7 @@ const Design = ({ toggleMode, currentMode: { value }, updateSettings }) => {
 
 	return (
 		<>
+
 			<div className="toolbar">
 				<button className="toggle-mode" onClick={toggleMode}>
 					{value ? <Sun size="14" /> : <Moon size="14" />}

@@ -5,6 +5,7 @@ import './footer.styles.scss';
 
 export default function Footer(currentMode) {
 	return (
+		<>
 		<footer>
 			<div>
 				<a href="https://codekeep.io/screenshot" target="_BLANK" rel="noopener noreferrer">
@@ -31,5 +32,6 @@ export default function Footer(currentMode) {
 				</a>
 			</div>
 		</footer>
+		</>
 	);
 }

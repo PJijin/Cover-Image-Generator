@@ -13,4 +13,5 @@ export const defaultSettings = {
 	exportExt: 'png',
 	font: 'Droid Sans',
 	overlay: 0.6,
+	file_name: 'blog_cover',
 };

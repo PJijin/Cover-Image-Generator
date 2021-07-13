@@ -5,6 +5,7 @@ import { Plus, Minus, Settings } from 'react-feather';
 import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
 
+
 import LabelOption from '../label-option/label-option.component';
 import NumberInput from '../number-input/number-input.component';
 import ColorPicker from '../color-picker/colorpicker.component';
@@ -13,6 +14,7 @@ import './canvas-properties.styles.scss';
 const CanvasProperties = ({ handleChange, defaultSettings, changeSettings, massUpdateSettings }) => {
 	const [radius, setRadius] = useState(defaultSettings.radius);
 	const [width, setWidth] = useState(defaultSettings.width);
+
 	const [height, setHeight] = useState(defaultSettings.height);
 	const { border, borderColor } = defaultSettings;
 
@@ -57,6 +59,9 @@ const CanvasProperties = ({ handleChange, defaultSettings, changeSettings, massU
 					</div>
 					{on && (
 						<div className="options-toggle">
+
+
+
 							<LabelOption name="Blog">
 								<select onChange={handleBlog} name="Blog">
 									<option value="dev">Dev.to</option>
@@ -64,6 +69,8 @@ const CanvasProperties = ({ handleChange, defaultSettings, changeSettings, massU
 									<option value="medium">Medium</option>
 								</select>
 							</LabelOption>
+
+
 
 							<LabelOption name="Width">
 								<NumberInput
@@ -82,6 +89,19 @@ const CanvasProperties = ({ handleChange, defaultSettings, changeSettings, massU
 									value={height}
 								/>
 							</LabelOption>
+
+							<div>
+								<h5>Filename</h5>
+								<input
+										type="url"
+										value={defaultSettings.file_name}
+										placeholder="Download file name"
+										onChange={(e) => {
+											changeSettings("file_name", e.target.value);
+										}}
+										name="file_name"
+									/>
+							</div>
 
 							<LabelOption name="Format">
 								<select onChange={handleChange} name="exportExt">
