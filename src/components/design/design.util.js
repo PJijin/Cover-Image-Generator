@@ -1,33 +1,49 @@
-import domtoimage from 'dom-to-image';
+import domtoimage from "dom-to-image";
 
-export const downloadImage = (node, width, height, type = 'png', file_name = 'blogcover') => {
-	const config = {
-		style: {
-			'transform-origin': 'center',
-		},
-		width,
-		height,
-		quality: 1,
-	};
+export const downloadImage = (
+  node,
+  width,
+  height,
+  type = "png",
+  file_name = "blogcover"
+) => {
+  const config = {
+    style: {
+      "transform-origin": "center",
+    },
+    width,
+    height,
+    quality: 1,
+  };
 
-	const downloadFile = (dataUrl, ext) => {
-		let link = document.createElement('a');
-		link.download = `${file_name}.${ext}`;
-		link.href = 'data:' + dataUrl;
-		document.body.appendChild(link);
-		link.click();
-		link.remove();
-	};
+  const downloadFile = (dataUrl, ext) => {
+    let link = document.createElement("a");
+    link.download = `${file_name}.${ext}`;
+    link.href = "data:" + dataUrl;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  };
 
-	if (type === 'png') {
-		domtoimage.toPng(node, config).then((dataUrl) => downloadFile(dataUrl, 'png'));
-	} else if (type === 'jpeg') {
-		domtoimage.toJpeg(node, config).then((dataUrl) => downloadFile(dataUrl, 'jpeg'));
-	} else if (type === 'svg') {
-		domtoimage.toSvg(node, config).then((dataUrl) => downloadFile(dataUrl, 'svg'));
-	}
+  if (type === "png") {
+    domtoimage
+      .toPng(node, config)
+      .then((dataUrl) => downloadFile(dataUrl, "png"));
+  } else if (type === "jpeg") {
+    domtoimage
+      .toJpeg(node, config)
+      .then((dataUrl) => downloadFile(dataUrl, "jpeg"));
+  } else if (type === "svg") {
+    domtoimage
+      .toSvg(node, config)
+      .then((dataUrl) => downloadFile(dataUrl, "svg"));
+  }
 };
 
 export const deleteImageFromArray = (images, imageToDelete) => {
-	return images.filter((image) => image !== imageToDelete);
+  var index = images.indexOf(imageToDelete);
+  if (index > -1) {
+    images.splice(index, 1);
+  }
+  return images;
 };
