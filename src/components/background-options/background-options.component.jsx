@@ -19,13 +19,14 @@ const BackgroundOptions = ({ handleChange, defaultSettings: { overlay, backgroun
 	const [loading, setImageLoaded] = useState(true);
 
 	const changeImageUrl = () => {
-		toDataURL(imageUrl, function (dataUrl) {
-			if (dataUrl) changeSettings('bgUrl', dataUrl);
-		});
+		if (imageUrl) changeSettings('bgUrl', imageUrl);
 	};
 
-	const refreshImage = () =>
-		setImageUrl(`https://source.unsplash.com/random/1280x807?${category}&time=${Math.random()}`);
+	const refreshImage = () => {
+		toDataURL(`https://source.unsplash.com/random/1280x807?${category}&time=${Math.random()}`, (dataUrl) => {
+			setImageUrl(dataUrl);
+		})
+	}
 
 	const changeCategory = (cat) => {
 		setCategory(cat);
