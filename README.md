@@ -50,7 +50,6 @@ I'm still making fixes to flaws and problems in my own version.
 
 -   Text Shadow Option
 -   Make it Node 18 compatible.
--   Fix Try another image loading
 -   Linear gradient background possibility
 -   Add custom file name input
 
