@@ -2,7 +2,7 @@
 
 Generate a cover image for your blog post online.
 
-<a href="https://twitter.com/jp1016v1"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/jp1016v1?style=social"></a>
+<a href="https://twitter.com/jp1016v1"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/jp1016v1?style=social"></a> and
 <a href="https://twitter.com/PJijin"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/PJijin?style=social"></a> created this repository, however, it doesn't appear like they are actively maintaining it.
 
 I thank them.
