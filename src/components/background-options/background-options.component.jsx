@@ -23,8 +23,10 @@ const BackgroundOptions = ({ handleChange, defaultSettings: { overlay, backgroun
 	};
 
 	const refreshImage = () => {
+		setImageLoaded(true);
 		toDataURL(`https://source.unsplash.com/random/1280x807?${category}&time=${Math.random()}`, (dataUrl) => {
 			setImageUrl(dataUrl);
+			setImageLoaded(false);
 		})
 	}
 
