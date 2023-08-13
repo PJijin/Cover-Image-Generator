@@ -2,16 +2,12 @@
 
 Generate a cover image for your blog post online.
 
+<a href="https://twitter.com/jp1016v1"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/jp1016v1?style=social"></a> and
+<a href="https://twitter.com/PJijin"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/PJijin?style=social"></a> created this repository, however, it doesn't appear like they are actively maintaining it.
 
-### Other projects:
+I thank them.
 
-- 🔖 [MarkDown](https://github.com/JP1016/Markdown) - Live Markdown Generator
-- 🗒 [Paper](https://github.com/JP1016/Paper) - A "no-cloud" note taking app with "networkless" sharing.
-- 👨‍💻 [ShowPath](https://github.com/PJijin/Show-Path) - Learning Path for Programmers
-
-<p align="center">
- <b>  <a href="https://codekeep.io/screenshot">Generate code screenshot with CodeKeep Screenshot</a>   </b>
-</p>
+I'm still making fixes to flaws and problems in my own version.
 
 ```
 ⚠️ Clear cache and check demo. On mac CMD + Shift + R, On Windows Ctrl + F5
@@ -22,13 +18,7 @@ Generate a cover image for your blog post online.
 ✅ Live Preview: <a href="https://cover-blog-generator.vercel.app/" target="_BLANK">Click Here</a>
 
 📹 Video Preview: <a href="https://www.youtube.com/watch?v=GGTrhgKrch8" target="_BLANK">Click Here</a>
-
-   <p align="center">
-   Made with ❤️ by <a href="https://twitter.com/jp1016v1"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/jp1016v1?style=social"></a>
-<a href="https://twitter.com/PJijin"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/PJijin?style=social"></a>
-  </p>
  
-
 
 ## ✨ Features
 
@@ -59,6 +49,7 @@ Generate a cover image for your blog post online.
 ## 📝 To Do
 
 -   Text Shadow Option
+-   Make it Node 18 compatible.
 
 
 ## ⚙️ Usage
@@ -67,9 +58,11 @@ You can use the online version to generate cover image. <a href="https://cover-b
 
 OR
 
-1. Clone the Repo `git clone https://github.com/PJijin/Cover-Image-Generator.git`
+1. Clone the Repo `git clone https://github.com/Ali-Nasir-01/Cover-Image-Generator.git`
 2. Run `npm install`
 3. Run `npm start`
+
+Be aware that **Node 14** is the only version that is currently compatible.
 
 ## 🤝 Contributing
 
